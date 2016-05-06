@@ -1,6 +1,7 @@
 ''' 
 from fivethirtyeight.com
 http://fivethirtyeight.com/features/how-long-will-your-smartphone-distract-you-from-family-dinner/
+My solution to the 12/22/2015 riddler
 Youve just finished unwrapping your holiday presents. 
 You and your sister got brand-new smartphones, opening them at the same moment. 
 You immediately both start doing important tasks on the Internet, 
