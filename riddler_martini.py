@@ -40,25 +40,41 @@
 
 import math
 
-def calculatevolume(H,R,z):
+def calculatevolume(H,R,Z):
 # find the volume of liquid for a cone
 # of height H, radius R,
-# and filled up to z, where z=H is full
-# and z = 0 is empty.
+# and filled up to Z, where Z=H is full
+# and Z = 0 is empty.
 # V of a cone = 1/3*(pi*r^2*h)
 
-    radius = R*z/H
-    volume = (math.pi * radius * radius * z)/3
+    radius = R*Z/H
+    volume = (math.pi * radius * radius * Z)/3
     return volume
     
-def calculatevolumeincrementally(H,R,z):
+def calculatevolumeincrementally(H,R,Z):
 # find the volume of liquid for a cone
 # by checking each point in the cone
 # Compare the accuracy to the above method.
 # We will need to use this method for the tilted
 # glass, and want to make sure it is accurate.
 
-R = 100
-H = 200
+# find the volume of liquid for a cone
+# of height H, radius R,
+# and filled up to Z, where Z=H is full
+# and Z = 0 is empty.
+    volume = 0;
+    for z in range (0,Z):
+        radius = int(z*R/H)
+        for y in range(-radius, radius):
+            for x in range(-radius, radius):
+                if (x**2 + y**2 < radius**2):
+                    volume += 1;
 
-print calculatevolume(H,R,50)
+    return volume;
+
+
+R = 1000
+H = 2000
+
+print calculatevolume(H,R,500)
+print calculatevolumeincrementally(H,R,500)
