@@ -48,7 +48,7 @@ def calculatevolume(H,R,Z):
 # V of a cone = 1/3*(pi*r^2*h)
 
     radius = R*Z/H
-    volume = (math.pi * radius * radius * Z)/3
+    volume = (math.pi * radius**2 * Z)/3
     return volume
     
 def calculatevolumeincrementally(H,R,Z):
@@ -64,7 +64,7 @@ def calculatevolumeincrementally(H,R,Z):
 # and Z = 0 is empty.
     volume = 0;
     for z in range (0,Z):
-        radius = int(z*R/H)
+        radius = int(0.5+z*R/H)
         for y in range(-radius, radius):
             for x in range(-radius, radius):
                 if (x**2 + y**2 < radius**2):
