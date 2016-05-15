@@ -108,23 +108,6 @@ def calculatetiltedvolume(H,R,opposite):
     return volume;
 
 
-
-
-
-
-'''
-R = 100
-H = 200
-
-volume = calculatevolume(H,R,1.00*H)
-print volume
-print calculatevolumeincrementally(H,R,1.00*H)
-
-print calculatefillheight(H,R,volume)
-
-print calculatetiltedvolume(H,R,0.5*H)
-'''
-
 R = 100
 H = 400
 increment = 10
