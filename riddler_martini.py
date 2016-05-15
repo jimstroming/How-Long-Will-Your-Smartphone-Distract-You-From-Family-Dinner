@@ -36,9 +36,11 @@
 # (z-z1) < m(x-x1)
 # (z-H)  < (H-s)(x-R)/(R-Rs/H)
 
+
 # Let's start writing some functions.
 
 import math
+import pdb
 
 def calculatevolume(H,R,Z):
     # find the volume of liquid for a cone
@@ -81,12 +83,45 @@ def calculatefillheight(H,R,V):
     fraction = V / denominator
     return fraction ** 0.3333
 
+def calculatetiltedvolume(H,R,opposite):
+    # find the volume of liquid for a tilted cone
+    # of height H, radius R,
+    # where the liquid is about to come out
+    # and filled up to a height of opposite on
+    # the opposite side.
 
-R = 1000
-H = 2000
+    volume = 0;
+    constantratio = (H-opposite)/(R - R*opposite/H)
+    for z in range (0,int(0.5+H)):
+        radius = int(0.5+z*R/H)
+        for y in range(-radius, radius):
+            for x in range(-radius, radius):
+                if (x**2 + y**2 < radius**2):
+                    # check if we are below the plane
+                    # (z-H)  < (H-s)(x-R)/(R-Rs/H)
 
-volume = calculatevolume(H,R,0.2*H)
+                    right = constantratio*(x-R)
+                    if z-H < right:
+                        volume += 1;
+                    else:
+                        pdb.set_trace()
+                        print "too high"
+
+    return volume;
+
+
+
+
+
+
+
+R = 100
+H = 200
+
+volume = calculatevolume(H,R,0.99*H)
 print volume
-print calculatevolumeincrementally(H,R,0.2*H)
+print calculatevolumeincrementally(H,R,0.99*H)
 
 print calculatefillheight(H,R,volume)
+
+print calculatetiltedvolume(H,R,H-1)
