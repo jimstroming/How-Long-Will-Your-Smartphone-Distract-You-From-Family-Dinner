@@ -91,7 +91,7 @@ def calculatetiltedvolume(H,R,opposite):
     # the opposite side.
 
     volume = 0;
-    constantratio = (H-opposite)/(R - R*opposite/H)
+    constantratio = (H-opposite)/(R + R*opposite/H)
     for z in range (0,int(0.5+H)):
         radius = int(0.5+z*R/H)
         for y in range(-radius, radius):
@@ -103,9 +103,6 @@ def calculatetiltedvolume(H,R,opposite):
                     right = constantratio*(x-R)
                     if z-H < right:
                         volume += 1;
-                    else:
-                        pdb.set_trace()
-                        print "too high"
 
     return volume;
 
@@ -118,10 +115,10 @@ def calculatetiltedvolume(H,R,opposite):
 R = 100
 H = 200
 
-volume = calculatevolume(H,R,0.99*H)
+volume = calculatevolume(H,R,1.00*H)
 print volume
-print calculatevolumeincrementally(H,R,0.99*H)
+print calculatevolumeincrementally(H,R,1.00*H)
 
 print calculatefillheight(H,R,volume)
 
-print calculatetiltedvolume(H,R,H-1)
+print calculatetiltedvolume(H,R,0.5*H)
