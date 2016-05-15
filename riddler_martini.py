@@ -63,7 +63,7 @@ def calculatevolumeincrementally(H,R,Z):
 # and filled up to Z, where Z=H is full
 # and Z = 0 is empty.
     volume = 0;
-    for z in range (0,Z):
+    for z in range (0,int(0.5+Z)):
         radius = int(0.5+z*R/H)
         for y in range(-radius, radius):
             for x in range(-radius, radius):
@@ -76,5 +76,5 @@ def calculatevolumeincrementally(H,R,Z):
 R = 1000
 H = 2000
 
-print calculatevolume(H,R,500)
-print calculatevolumeincrementally(H,R,500)
+print calculatevolume(H,R,0.2*H)
+print calculatevolumeincrementally(H,R,0.2*H)
