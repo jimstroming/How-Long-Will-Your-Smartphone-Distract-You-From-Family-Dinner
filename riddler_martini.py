@@ -91,7 +91,8 @@ def calculatetiltedvolume(H,R,opposite):
     # the opposite side.
 
     volume = 0;
-    constantratio = (H-opposite)/(R + R*opposite/H)
+    constantratio = float(H-opposite)/float(R + R*opposite/H)
+    # print "constantratio = ", constantratio
     for z in range (0,int(0.5+H)):
         radius = int(0.5+z*R/H)
         for y in range(-radius, radius):
@@ -111,7 +112,7 @@ def calculatetiltedvolume(H,R,opposite):
 
 
 
-
+'''
 R = 100
 H = 200
 
@@ -122,3 +123,22 @@ print calculatevolumeincrementally(H,R,1.00*H)
 print calculatefillheight(H,R,volume)
 
 print calculatetiltedvolume(H,R,0.5*H)
+'''
+
+R = 100
+H = 400
+increment = 10
+oppheight = increment
+print "levelheight", " ", "oppheight", " ", "fractionlevel", " ", "fractionopp"
+while (oppheight < H):
+    volume = calculatetiltedvolume(H,R,oppheight)
+    levelheight = calculatefillheight(H,R,volume)
+    
+    print levelheight, " ", oppheight, "      ",  float(levelheight)/H, "   ", float(oppheight)/H
+    
+    oppheight += increment
+
+
+
+
+
