@@ -38,6 +38,27 @@
 
 # Let's start writing some functions.
 
+import math
 
+def calculatevolume(H,R,z):
+# find the volume of liquid for a cone
+# of height H, radius R,
+# and filled up to z, where z=H is full
+# and z = 0 is empty.
+# V of a cone = 1/3*(pi*r^2*h)
 
-print "Still working on it"
+    radius = R*z/H
+    volume = (math.pi * radius * radius * z)/3
+    return volume
+    
+def calculatevolumeincrementally(H,R,z):
+# find the volume of liquid for a cone
+# by checking each point in the cone
+# Compare the accuracy to the above method.
+# We will need to use this method for the tilted
+# glass, and want to make sure it is accurate.
+
+R = 100
+H = 200
+
+print calculatevolume(H,R,50)
