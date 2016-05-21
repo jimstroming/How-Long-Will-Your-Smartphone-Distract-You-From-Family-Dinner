@@ -63,25 +63,52 @@ UCUC
 UCUR 1 common, p = 1/108, e = 1/108
 UCUU
 
+UUCC
+UUCR 1 common, p = 1/108, e = 1/108
+UUCU
 
-UUC
-UUU
-UUR
+UUUC
+UUUR
+UUUU
 
+UURC 1 common, p = 1/108, e = 1/108
+UURR
+UURU
 
-URU
-URR
+URUC 1 common, p = 1/108, e = 1/108
+URUR
+URUU
 
-RCC
+URRC 1 common, p = 1/216, e = 1/216
+URRR
+URRU
 
-RCR
+RCCC
+RCCR
+RCCU 2 common, p = 1/72, e = 1/36
 
+RCRC
+RCRR
+RCRU 1 common, p = 1/216, e = 1/216
 
-RUU
-RUR
+RUUC 1 common, p = 1/108, e = 1/108
+RUUR
+RUUU
 
-RRC
-RRU
-RRR
+RURC 1 common, p = 1/216, e = 1/216
+RURR
+RURU
+
+RRCC
+RRCR
+RRCU 1 common, p = 1/216, e = 1/216
+
+RRUC 1 common, p = 1/216, e = 1/216
+RRUR
+RRUU
+
+RRRC
+RRRR
+RRRU
 
 """
