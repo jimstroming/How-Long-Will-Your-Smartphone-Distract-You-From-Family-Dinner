@@ -16,35 +16,45 @@ uncommon = 1/3
 rare     = 1/6
 
 
+There are 6, length 3 solutions
+CUR 1 common, p = 1/36, e = 1/36
+CRU 1 common, p = 1/36, e = 1/36
+UCR 1 common, p = 1/36, e = 1/36
+URC 1 common, p = 1/36, e = 1/36
+RCU 1 common, p = 1/36, e = 1/36
+RUC 1 common, p = 1/36, e = 1/36
+total expected value      = 1/6   for length 3 solutions
+
+
+
 CCC
 CCU
 CCR
 
 CUC
 CUU
-CUR 1 common
 
 CRC
-CRU 1 common
+
 CRR
 
 UCC
 UCU
-UCR 1 common
+
 
 UUC
 UUU
 UUR
 
-URC 1 common
+
 URU
 URR
 
 RCC
-RCU 1 common
+
 RCR
 
-RUC 1 common
+
 RUU
 RUR
 
