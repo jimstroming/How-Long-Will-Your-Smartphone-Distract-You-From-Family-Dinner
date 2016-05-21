@@ -25,14 +25,12 @@ RCU 1 common, p = 1/36, e = 1/36
 RUC 1 common, p = 1/36, e = 1/36
 total expected value      = 1/6   for length 3 solutions
 
-
 CCUR 2 common, p = 1/72, e = 1/36
 CCRU 2 common, p = 1/72, e = 1/36
 CUCR 2 common, p = 1/72, e = 1/36 
 CRCU 2 common, p = 1/72, e = 1/36
 UCCR 2 common, p = 1/72, e = 1/36
 RCCU 2 common, p = 1/72, e = 1/36
-
 
 CUUR 1 common, p = 1/108, e = 1/108
 UCUR 1 common, p = 1/108, e = 1/108
@@ -113,5 +111,40 @@ RRUU
 RRRC
 RRRR
 RRRU
+
+"""
+
+"""
+Too brute force.
+
+Let's try to simplify. 
+What if we only consider cases that end in R.
+By substituting gems, we should be able to change these into cases that end in C and 
+into cases that end in U.
+
+CUR
+UCR
+
+CCUR
+CUCR
+CUUR
+UCCR
+UCUR
+UUCR
+
+CCCUR
+CCUCR
+CCUUR
+CUCCR
+CUCUR
+CUUCR
+CUUUR
+UCCCR
+UCCUR
+UCUCR
+UCUUR
+UUCCR
+UUCUR
+UUUCR
 
 """
