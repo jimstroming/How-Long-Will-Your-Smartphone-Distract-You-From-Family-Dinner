@@ -27,19 +27,41 @@ total expected value      = 1/6   for length 3 solutions
 
 
 
-CCC
-CCU
-CCR
+CCCC
+CCCU
+CCCR
 
-CUC
-CUU
+CCUC
+CCUU
+CCUR 2 common, p = 1/72, e = 1/36
 
-CRC
+CCRC
+CCRU 2 common, p = 1/72, e = 1/36
+CCRR
 
-CRR
+CUCC
+CUCU
+CUCR 2 common, p = 1/72, e = 1/36 
 
-UCC
-UCU
+CUUC
+CUUU
+CUUR 1 common, p = 1/108, e = 1/108
+
+CRCC
+CRCU 2 common, p = 1/72, e=1/36
+CRCR
+
+CRRC
+CRRR
+CRRU 1 common, p = 1/216, e = 1/216
+
+UCCC
+UCCR 2 common, p = 1/72, e = 1/36
+UCCU
+
+UCUC
+UCUR 1 common, p = 1/108, e = 1/108
+UCUU
 
 
 UUC
