@@ -10,7 +10,46 @@ common gems will you end up with, on average?
 """
 
 """
+probabilities of gems
+common   = 1/2 
+uncommon = 1/3 
+rare     = 1/6
 
 
+CCC
+CCU
+CCR
+
+CUC
+CUU
+CUR 1 common
+
+CRC
+CRU 1 common
+CRR
+
+UCC
+UCU
+UCR 1 common
+
+UUC
+UUU
+UUR
+
+URC 1 common
+URU
+URR
+
+RCC
+RCU 1 common
+RCR
+
+RUC 1 common
+RUU
+RUR
+
+RRC
+RRU
+RRR
 
 """
