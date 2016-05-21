@@ -26,6 +26,27 @@ RUC 1 common, p = 1/36, e = 1/36
 total expected value      = 1/6   for length 3 solutions
 
 
+CCUR 2 common, p = 1/72, e = 1/36
+CCRU 2 common, p = 1/72, e = 1/36
+CUCR 2 common, p = 1/72, e = 1/36 
+CRCU 2 common, p = 1/72, e = 1/36
+UCCR 2 common, p = 1/72, e = 1/36
+RCCU 2 common, p = 1/72, e = 1/36
+
+
+CUUR 1 common, p = 1/108, e = 1/108
+UCUR 1 common, p = 1/108, e = 1/108
+UUCR 1 common, p = 1/108, e = 1/108
+UURC 1 common, p = 1/108, e = 1/108
+URUC 1 common, p = 1/108, e = 1/108
+RUUC 1 common, p = 1/108, e = 1/108
+
+CRRU 1 common, p = 1/216, e = 1/216
+RRUC 1 common, p = 1/216, e = 1/216
+URRC 1 common, p = 1/216, e = 1/216
+RCRU 1 common, p = 1/216, e = 1/216
+RURC 1 common, p = 1/216, e = 1/216
+RRCU 1 common, p = 1/216, e = 1/216
 
 CCCC
 CCCU
@@ -33,77 +54,59 @@ CCCR
 
 CCUC
 CCUU
-CCUR 2 common, p = 1/72, e = 1/36
 
 CCRC
-CCRU 2 common, p = 1/72, e = 1/36
 CCRR
 
 CUCC
 CUCU
-CUCR 2 common, p = 1/72, e = 1/36 
 
 CUUC
 CUUU
-CUUR 1 common, p = 1/108, e = 1/108
 
 CRCC
-CRCU 2 common, p = 1/72, e=1/36
 CRCR
 
 CRRC
 CRRR
-CRRU 1 common, p = 1/216, e = 1/216
 
 UCCC
-UCCR 2 common, p = 1/72, e = 1/36
 UCCU
 
 UCUC
-UCUR 1 common, p = 1/108, e = 1/108
 UCUU
 
 UUCC
-UUCR 1 common, p = 1/108, e = 1/108
 UUCU
 
 UUUC
 UUUR
 UUUU
 
-UURC 1 common, p = 1/108, e = 1/108
 UURR
 UURU
 
-URUC 1 common, p = 1/108, e = 1/108
 URUR
 URUU
 
-URRC 1 common, p = 1/216, e = 1/216
 URRR
 URRU
 
 RCCC
 RCCR
-RCCU 2 common, p = 1/72, e = 1/36
 
 RCRC
 RCRR
-RCRU 1 common, p = 1/216, e = 1/216
 
-RUUC 1 common, p = 1/108, e = 1/108
 RUUR
 RUUU
 
-RURC 1 common, p = 1/216, e = 1/216
 RURR
 RURU
 
 RRCC
 RRCR
-RRCU 1 common, p = 1/216, e = 1/216
 
-RRUC 1 common, p = 1/216, e = 1/216
 RRUR
 RRUU
 
