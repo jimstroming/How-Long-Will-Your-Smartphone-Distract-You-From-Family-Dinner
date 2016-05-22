@@ -148,3 +148,47 @@ UUCUR
 UUUCR
 
 """
+
+"""
+
+Simplify again.
+Cases that start with C, end in R.
+
+
+CUR
+
+CCUR
+CUCR
+
+CCCUR
+CCUCR
+CCUUR
+CUCCR
+CUCUR
+CUUCR
+CUUUR  
+
+"""
+
+"""
+Another simplification.
+Lets do a case with gem A,B, and C,
+where P(A)=P(B)=P(C)=1/3
+Cases starting with A, ending with C
+
+A B   C   p(B) = 1/2   E(B) = 1/2
+A AB  C   
+A BA  C
+A AAB C
+A ABA C
+A ABB C
+A BAA C
+A BAB C
+A BBA C
+
+
+
+
+
+
+"""
