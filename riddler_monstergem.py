@@ -3,11 +3,38 @@ From http://fivethirtyeight.com/features/can-you-slay-the-puzzle-of-the-monsters
 
 A video game requires you to slay monsters to collect gems. Every time you slay a monster, 
 it drops one of three types of gems: a common gem, an uncommon gem or a rare gem. 
-The probabilities of these gems being dropped are in the ratio of 3:2:1 — three common 
-gems for every two uncommon gems for every one rare gem, on average. If you slay monsters 
+The probabilities of these gems being dropped are in the ratio of 3 to 2 to 1. Three common 
+gems for every two uncommon gems for every one rare gem, on average. If you slay monsters
 until you have at least one of each of the three types of gems, how many of the most 
 common gems will you end up with, on average?
 """
+
+
+"""
+Let's try a python simulation
+
+"""
+
+import random
+
+def findgems():
+
+    probgems   = [0,0,0,1,1,2]
+    weightgem  = [1, 0, 0]
+    numbergems = [0, 0, 0]
+    
+    while (numbergems[0]*numbergems[1]*numbergems[2] == 0):
+        gem = random.choice(probgems)  
+        numbergems[gem] += 1
+
+    return numbergems[0]
+
+
+loopcount = 10000000
+sum = 0
+for x in range(0, loopcount):
+    sum += findgems()
+print float(sum)/loopcount
 
 """
 probabilities of gems
