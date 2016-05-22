@@ -176,18 +176,21 @@ Lets do a case with gem A,B, and C,
 where P(A)=P(B)=P(C)=1/3
 Cases starting with A, ending with C
 
-A B   C   p(B) = 1/2   E(B) = 1/2
-A AB  C   
-A BA  C
-A AAB C
-A ABA C
-A ABB C
-A BAA C
-A BAB C
-A BBA C
+A B   C   p = 1/9    E(B) = 1/9
+
+A AB  C   p = 1/27   E(B) = 1/27
+A BA  C   p = 1/27   E(B) = 1/27 
+
+A AAB C   p = 1/81   E(B) = 1/81
+A ABA C   p = 1/81   E(B) = 1/81 
+A ABB C   p = 1/81   E(B) = 2/81
+A BAA C   p = 1/81   E(B) = 1/81
+A BAB C   p = 1/81   E(B) = 2/81
+A BBA C   p = 1/81   E(B) = 2/81
 
 
-
+So, for cases starting with A, ending with C
+E(B) = 1/9  +  2*(1/27)  +  9*(1/81)
 
 
 
