@@ -216,9 +216,26 @@ A BAA C   p = 1/81   E(B) = 1/81
 A BAB C   p = 1/81   E(B) = 2/81
 A BBA C   p = 1/81   E(B) = 2/81
 
+A AAAB C  p = 1/243  E(B) = 1/243
+A AABA C  p = 1/243  E(B) = 1/243
+A AABB C  p = 1/243  E(B) = 2/243
+A ABAA C  p = 1/243  E(B) = 1/243
+A ABAB C  p = 1/243  E(B) = 2/243
+A ABBA C  p = 1/243  E(B) = 2/243
+A ABBB C  p = 1/243  E(B) = 3/243
+A BAAA C  p = 1/243  E(B) = 1/243
+A BAAB C  p = 1/243  E(B) = 2/243
+A BABA C  p = 1/243  E(B) = 2/243
+A BABB C  p = 1/243  E(B) = 3/243
+A BBAA C  p = 1/243  E(B) = 2/243
+A BBAB C  p = 1/243  E(B) = 3/243
+A BBBA C  p = 1/243  E(B) = 3/243
+A BBBB C  p = 1/243  E(B) = 4/243
+Total				 E(B) = (4 + 12 + 12 + 4)/243 = 32/243
+
 
 So, for cases starting with A, ending with C
-E(B) = 1/9  +  2*(1/27)  +  9*(1/81)
+E(B) = 1/9  +  2*(1/27)  +  9*(1/81) + 32*(1/243)
 
 """
 """
@@ -236,11 +253,32 @@ AAAAB  p = 1/32, e(A) = 4/32, e(B) = 1/32
 Cases starting with B, ending with A
 
                  e(B) = 1/4,  e(A) = 1/4
-                 e(B) = 1/4,  e(A) = 1/8
+                 e(B) = 2/8,  e(A) = 1/8
                  e(B) = 3/16, e(A) = 1/16
                  e(B) = 4/32, e(A) = 1/32
                  
-                 
+e(A) = 1/4+1/8+1/16+1/32+...
+     + 1/4+2/8+3/16+4/32+...
+     
+for the first sequence     
+S = a/(1-r)
+  = (1/4)(1-1/2) = 1/2                     
 
+for the 2nd sequence
+1/4 + 2/8 + 3/16 + 4/32 
+=
 
+1/4 + 1/8 + 1/16 + 1/32 + ...     = 1/2
++
+      1/8 + 1/16 + 1/32 + ...     = 1/4
++      
+            1/16 + 1/32 + ...     = 1/8
+...
+
+So the 2nd sequence = 
+
+1/2 + 1/4 + 1/8 =  1
+
+So, e(A) = 1/2 + 1 = 1.5 = e(B)
+            
 """
