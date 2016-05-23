@@ -21,7 +21,6 @@ import random
 def findgems():
 
     probgems   = [0,0,0,1,1,2]
-    weightgem  = [1, 0, 0]
     numbergems = [0, 0, 0]
     
     while (numbergems[0]*numbergems[1]*numbergems[2] == 0):
@@ -31,7 +30,7 @@ def findgems():
     return numbergems[0]
 
 
-loopcount = 10000000
+loopcount = 100000
 sum = 0
 for x in range(0, loopcount):
     sum += findgems()
@@ -281,4 +280,28 @@ So the 2nd sequence =
 
 So, e(A) = 1/2 + 1 = 1.5 = e(B)
             
+
+
+# Let's validate the two gem case with python
+
+"""
+
+def findtwogems():
+
+    probgems   = [0,1]
+    numbergems = [0,0]
+
+    while (numbergems[0]*numbergems[1] == 0):
+        gem = random.choice(probgems)
+        numbergems[gem] += 1
+
+    return numbergems[0]
+
+"""
+loopcount = 20000
+sum = 0
+for x in range(0, loopcount):
+    sum += findtwogems()
+print float(sum)/loopcount
+
 """
