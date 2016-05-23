@@ -339,17 +339,30 @@ e(B) = 2/9 + 8/27 + 24/81 + 64/243
      = (2/9)/(1/3) + (4/27)/(1/3) + (8/81)/(1/3) + ...
      = 3(2/9)/(1-2/3) = 2
 So, in total
-e(A) = 1/2 + 2/3 = 7/6
-e(B) = 1/3 + 2   = 7/3     
-     
-                            
+e(A) = 1/2 + 2/3 = 7/6  = 1.17
+e(B) = 1/3 + 2   = 7/3  = 2.33
+                              
 """
+# Now, lets simulate the 2 gem, uneven probability case
 
-"""
+def findtwogemsuneven():
+
+    probgems   = [0,1,1]
+    numbergems = [0,0]
+
+    while (numbergems[0]*numbergems[1] == 0):
+        gem = random.choice(probgems)
+        numbergems[gem] += 1
+
+    return numbergems[0], numbergems[1]
+
+
 loopcount = 20000
-sum = 0
+sum0 = sum1 = 0
 for x in range(0, loopcount):
-    sum += findtwogems()
-print float(sum)/loopcount
+    gem0,gem1 = findtwogemsuneven()
+    sum0 += gem0
+    sum1 += gem1
+print float(sum0)/loopcount
+print float(sum1)/loopcount
 
-"""
