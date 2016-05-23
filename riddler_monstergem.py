@@ -298,6 +298,27 @@ def findtwogems():
     return numbergems[0]
 
 """
+# Another simplified case.
+p(A) = 1/3, p(B) = 2/3
+Find expected number of B to till you get both A and B
+
+Cases starting with A, ending with B
+
+AB     p = 2/9,   e(A) = 2/9,   e(B) = 2/9
+AAB    p = 2/27,  e(A) = 4/27,  e(B) = 2/27
+AAAB   p = 2/81,  e(A) = 6/81,  e(B) = 2/81
+AAAAB  p = 2/243, e(A) = 8/243, e(B) = 2/243
+
+Cases starting with B, ending with A
+
+BA     p = 2/9    e(A) = 2/9    e(B) = 2/9
+BBA    p = 4/27   e(A) = 4/27   e(B) = 8/27
+BBBA   p = 8/81   e(A) = 8/81   e(B) = 24/81
+BBBBA  p = 16/243 e(A) = 16/243 e(B) = 64/243
+
+"""
+
+"""
 loopcount = 20000
 sum = 0
 for x in range(0, loopcount):
