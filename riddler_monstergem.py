@@ -182,10 +182,11 @@ Simplify again.
 Cases that start with C, end in R.
 
 
-CUR
+CUR   p = 1/36   E(C) = 1/36   E(U) = 1/36   E(R) = 1/36 
 
-CCUR
-CUCR
+CCUR  p = 1/72   E(C) = 1/36   E(U) = 1/72   E(R) = 1/72
+CUCR  p = 1/72   E(C) = 1/36   E(U) = 1/72   E(R) = 1/72
+CUUR  p = 1/108  E(C) = 1/108  E(U) = 1/54   E(R) = 1/108
 
 CCCUR
 CCUCR
