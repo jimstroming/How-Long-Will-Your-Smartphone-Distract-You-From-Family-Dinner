@@ -11,7 +11,8 @@ common gems will you end up with, on average?
 
 
 """
-Let's try a python simulation
+Let's write a python simulation.  
+Python simulation shows 3.65 average number of common gem.
 
 """
 
@@ -219,6 +220,27 @@ A BBA C   p = 1/81   E(B) = 2/81
 So, for cases starting with A, ending with C
 E(B) = 1/9  +  2*(1/27)  +  9*(1/81)
 
+"""
+"""
+
+Another simplification.  
+Let's do a case with gem A and B
+where P(A) = P(B) = 1/2
+Cases starting with A, ending with B
+
+AB     p = 1/4,  e(A) = 1/4,  e(B) = 1/4
+AAB    p = 1/8,  e(A) = 1/4,  e(B) = 1/8
+AAAB   p = 1/16, e(A) = 3/16, e(B) = 1/16
+AAAAB  p = 1/32, e(A) = 4/32, e(B) = 1/32
+
+Cases starting with B, ending with A
+
+                 e(B) = 1/4,  e(A) = 1/4
+                 e(B) = 1/4,  e(A) = 1/8
+                 e(B) = 3/16, e(A) = 1/16
+                 e(B) = 4/32, e(A) = 1/32
+                 
+                 
 
 
 """
