@@ -188,13 +188,13 @@ CCUR  p = 1/72   E(C) = 1/36   E(U) = 1/72   E(R) = 1/72
 CUCR  p = 1/72   E(C) = 1/36   E(U) = 1/72   E(R) = 1/72
 CUUR  p = 1/108  E(C) = 1/108  E(U) = 1/54   E(R) = 1/108
 
-CCCUR
-CCUCR
-CCUUR
-CUCCR
-CUCUR
-CUUCR
-CUUUR  
+CCCUR p = 1/144  E(C) = 3/144  E(U) = 1/144  E(R) = 1/144
+CCUCR p = 1/144  E(C) = 3/144  E(U) = 1/144  E(R) = 1/144
+CCUUR p = 1/216  E(C) = 2/216  E(U) = 1/108  E(R) = 1/216
+CUCCR p = 1/144  E(C) = 3/144  E(U) = 1/144  E(R) = 1/144
+CUCUR p = 1/216  E(C) = 2/216  E(U) = 1/108  E(R) = 1/216
+CUUCR p = 1/216  E(C) = 2/216  E(U) = 1/108  E(R) = 1/216
+CUUUR p = 1/324  E(C) = 1/324  E(U) = 1/108  E(R) = 1/324 
 
 """
 
