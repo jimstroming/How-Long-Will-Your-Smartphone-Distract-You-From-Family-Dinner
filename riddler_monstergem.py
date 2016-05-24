@@ -226,7 +226,58 @@ CUCUR p = 1/216  E(C) = 2/216  E(U) = 1/108  E(R) = 1/216
 CUUCR p = 1/216  E(C) = 2/216  E(U) = 1/108  E(R) = 1/216
 CUUUR p = 1/324  E(C) = 1/324  E(U) = 1/108  E(R) = 1/324 
 
-Start with the all C combinations.  Are those easy to calculate?
+CCCCCR p = 1/192, E(C) = 5/192
+CCCCUR p = 1/288, E(C) = 4/288
+CCCUCR p = 1/288, E(C) = 4/288
+CCCUUR p = 1/432, E(C) = 3/432
+CCUCCR p = 1/288, E(C) = 4/288
+CCUCUR p = 1/432, E(C) = 3/432
+CCUUCR p = 1/432, E(C) = 3/432
+CCUUUR p = 1/648, E(C) = 2/648
+CUCCCR p = 1/288, E(C) = 4/288
+CUCCUR p = 1/432, E(C) = 3/432
+CUCUCR p = 1/432, E(C) = 3/432
+CUCUUR p = 1/648, E(C) = 2/648
+CUUCCR p = 1/432, E(C) = 3/432
+CUUCUR p = 1/648, E(C) = 2/648
+CUUUCR p = 1/648, E(C) = 2/648
+CUUUUR p = 1/972, E(C) = 1/972
+
+CCCCCCR p = 1/384, E(C) = 6/384
+CCCCCUR p = 1/576, E(C) = 5/576
+CCCCUCR p = 1/576, E(C) = 5/576
+CCCCUUR p = 1/864, E(C) = 4/864
+CCCUCCR p = 1/576, E(C) = 5/576
+CCCUCUR p = 1/864, E(C) = 4/864
+CCCUUCR p = 1/864, E(C) = 4/864
+CCCUUUR p = 1/1296, E(C) = 3/1296
+CCUCCCR p = 1/576, E(C) = 5/576
+CCUCCUR p = 1/864, E(C) = 4/864
+CCUCUCR p = 1/864, E(C) = 4/864
+CCUCUUR p = 1/1296, E(C) = 3/1296
+CCUUCCR p = 1/864, E(C) = 4/864
+CCUUCUR p = 1/1296, E(C) = 3/1296
+CCUUUCR p = 1/1296, E(C) = 3/1296
+CCUUUUR p = 1/1944, E(C) = 2/1944
+CUCCCCR p = 1/576, E(C) = 5/576
+CUCCCUR p = 1/864, E(C) = 4/864
+CUCCUCR p = 1/864, E(C) = 4/864
+CUCCUUR p = 1/1296, E(C) = 3/1296
+CUCUCCR p = 1/864, E(C) = 4/864
+CUCUCUR p = 1/1296, E(C) = 3/1296
+CUCUUCR p = 1/1296, E(C) = 3/1296
+CUCUUUR p = 1/1944, E(C) = 2/1944
+CUUCCCR p = 1/864, E(C) = 4/864
+CUUCCUR p = 1/1296, E(C) = 3/1296
+CUUCUCR p = 1/1296, E(C) = 3/1296
+CUUCUUR p = 1/1944, E(C) = 2/1944
+CUUUCCR p = 1/1296, E(C) = 3/1296
+CUUUCUR p = 1/1944, E(C) = 2/1944
+CUUUUCR p = 1/1944, E(C) = 2/1944
+CUUUUUR p = 1/2916, E(C) = 1/2916
+
+
+Start with the all C combinations.  Are those easy to calculate? Yes
 E(C) = 2/24 + 3/48 + 4/96 + ...
      = 1/24 + 1/48 + 1/96 + ...
      + 1/24 + 1/48 + 1/96 + ...
@@ -243,8 +294,15 @@ E(C) = 4/36   + (1/16 + 1/18 + 1/108) + (4/96 + 9/144 + 8/216 + 1/324)
      = 1/9    + 55/432 +
      = 48/432 + 55/432 +
 
+break it down into manageable units
 
-
+E(C) =                      2/24           + 1/36
+                    + 3/48        + 4/72            + 1/108
+             + 4/96         9/144          + 6/216            + 1/324
+       + 5/192 +    16/288       + 18/432           + 8/648           + 1/972
++ 6/384 +     25/576 +    14/864 +          30/1296 +         10/1944         + 1/2916
+     
+= 1/2   +                                                                        + 1/12
 """
 
 
