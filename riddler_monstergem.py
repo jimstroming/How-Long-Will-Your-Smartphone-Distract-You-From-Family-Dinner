@@ -212,10 +212,12 @@ So let's calculate the total include all C, then subtract out all C.
 CCR   p = 1/24   E(C) = 1/12   
 CUR   p = 1/36   E(C) = 1/36   
 
+
 CCCR  p = 1/48   E(C) = 1/16
 CCUR  p = 1/72   E(C) = 1/36   
 CUCR  p = 1/72   E(C) = 1/36   
 CUUR  p = 1/108  E(C) = 1/108  
+
 
 CCCCR p = 1/96   E(C) = 4/96
 CCCUR p = 1/144  E(C) = 3/144  E(U) = 1/144  E(R) = 1/144
@@ -225,6 +227,7 @@ CUCCR p = 1/144  E(C) = 3/144  E(U) = 1/144  E(R) = 1/144
 CUCUR p = 1/216  E(C) = 2/216  E(U) = 1/108  E(R) = 1/216
 CUUCR p = 1/216  E(C) = 2/216  E(U) = 1/108  E(R) = 1/216
 CUUUR p = 1/324  E(C) = 1/324  E(U) = 1/108  E(R) = 1/324 
+
 
 CCCCCR p = 1/192, E(C) = 5/192
 CCCCUR p = 1/288, E(C) = 4/288
@@ -242,6 +245,7 @@ CUUCCR p = 1/432, E(C) = 3/432
 CUUCUR p = 1/648, E(C) = 2/648
 CUUUCR p = 1/648, E(C) = 2/648
 CUUUUR p = 1/972, E(C) = 1/972
+
 
 CCCCCCR p = 1/384, E(C) = 6/384
 CCCCCUR p = 1/576, E(C) = 5/576
@@ -277,6 +281,74 @@ CUUUUCR p = 1/1944, E(C) = 2/1944
 CUUUUUR p = 1/2916, E(C) = 1/2916
 
 
+CCCCCCCR p = 1/768,  E(C) = 7/768
+CCCCCCUR p = 1/1152, E(C) = 6/1152
+CCCCCUCR p = 1/1152, E(C) = 6/1152
+CCCCCUUR p = 1/1728, E(C) = 5/1728
+CCCCUCCR p = 1/1152, E(C) = 6/1152
+CCCCUCUR p = 1/1728, E(C) = 5/1728
+CCCCUUCR p = 1/1728, E(C) = 5/1728
+CCCCUUUR p = 1/2592, E(C) = 4/2592
+CCCUCCCR p = 1/1152, E(C) = 6/1152
+CCCUCCUR p = 1/1728, E(C) = 5/1728
+CCCUCUCR p = 1/1728, E(C) = 5/1728
+CCCUCUUR p = 1/2592, E(C) = 4/2592
+CCCUUCCR p = 1/1728, E(C) = 5/1728
+CCCUUCUR p = 1/2592, E(C) = 4/2592
+CCCUUUCR p = 1/2592, E(C) = 4/2592
+CCCUUUUR p = 1/3888, E(C) = 3/3888
+
+CCUCCCCR p = 1/1152, E(C) = 6/1152
+CCUCCCUR p = 1/1728, E(C) = 5/1728
+CCUCCUCR p = 1/1728, E(C) = 5/1728
+CCUCCUUR p = 1/2592, E(C) = 4/2592
+CCUCUCCR p = 1/1728, E(C) = 5/1728
+CCUCUCUR p = 1/2592, E(C) = 4/2592
+CCUCUUCR p = 1/2592, E(C) = 4/2592
+CCUCUUUR p = 1/3888, E(C) = 3/3888
+CCUUCCCR p = 1/1728, E(C) = 5/1728
+CCUUCCUR p = 1/2592, E(C) = 4/2592
+CCUUCUCR p = 1/2592, E(C) = 4/2592
+CCUUCUUR p = 1/3888, E(C) = 3/3888
+CCUUUCCR p = 1/2592, E(C) = 4/2592
+CCUUUCUR p = 1/3888, E(C) = 3/3888
+CCUUUUCR p = 1/3888, E(C) = 3/3888
+CCUUUUUR p = 1/5832, E(C) = 2/5832
+
+CUCCCCCR p = 1/1152, E(C) = 6/1152
+CUCCCCUR p = 1/1728, E(C) = 5/1728
+CUCCCUCR p = 1/1728, E(C) = 5/1728
+CUCCCUUR p = 1/2592, E(C) = 4/2592
+CUCCUCCR p = 1/1728, E(C) = 5/1728
+CUCCUCUR p = 1/2592, E(C) = 4/2592
+CUCCUUCR p = 1/2592, E(C) = 4/2592
+CUCCUUUR p = 1/3888, E(C) = 3/3888
+CUCU
+CUCU
+CUCU
+CUCU
+CUCU
+CUCU
+CUCU
+CUCU
+
+CUUCCCCR
+CUUCCCUR
+CUUCCUCR
+CUUCCUUR
+CUUCUCCR
+CUUCUCUR
+CUUCUUCR
+CUUCUUUR
+CUUUCCCR
+CUUUCCUR
+CUUUCUCR
+CUUUCUUR
+CUUUUCCR
+CUUUUCUR
+CUUUUUCR
+CUUUUUUR
+
 Start with the all C combinations.  Are those easy to calculate? Yes
 E(C) = 2/24 + 3/48 + 4/96 + ...
      = 1/24 + 1/48 + 1/96 + ...
@@ -295,14 +367,16 @@ E(C) = 4/36   + (1/16 + 1/18 + 1/108) + (4/96 + 9/144 + 8/216 + 1/324)
      = 48/432 + 55/432 +
 
 break it down into manageable units
+We will sum the left branches, the right branches, and the center branch
 
-E(C) =                      2/24           + 1/36
-                    + 3/48        + 4/72            + 1/108
-             + 4/96         9/144          + 6/216            + 1/324
-       + 5/192 +    16/288       + 18/432           + 8/648           + 1/972
-+ 6/384 +     25/576 +    14/864 +          30/1296 +         10/1944         + 1/2916
+E(C) =                             2/24           + 1/36
+                           + 3/48        + 4/72            + 1/108
+                     + 4/96         9/144          + 6/216            + 1/324
+              + 5/192 +    16/288       + 18/432           + 8/648           + 1/972
+        + 6/384 +     25/576 +    14/864 +          30/1296 +         10/1944         + 1/2916
++7/768  + 
      
-= 1/2   +                                                                        + 1/12
+= 1/4   +                                                                        + 1/12
 """
 
 
