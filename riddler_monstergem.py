@@ -280,6 +280,7 @@ CUUUCUR p = 1/1944, E(C) = 2/1944
 CUUUUCR p = 1/1944, E(C) = 2/1944
 CUUUUUR p = 1/2916, E(C) = 1/2916
 
+-------------------------------------
 
 CCCCCCCR p = 1/768,  E(C) = 7/768
 CCCCCCUR p = 1/1152, E(C) = 6/1152
@@ -323,31 +324,31 @@ CUCCUCCR p = 1/1728, E(C) = 5/1728
 CUCCUCUR p = 1/2592, E(C) = 4/2592
 CUCCUUCR p = 1/2592, E(C) = 4/2592
 CUCCUUUR p = 1/3888, E(C) = 3/3888
-CUCU
-CUCU
-CUCU
-CUCU
-CUCU
-CUCU
-CUCU
-CUCU
+CUCUCCCR p = 1/2592, E(C) = 4/2592
+CUCUCCUR p = 1/2592, E(C) = 4/2592
+CUCUCUCR p = 1/2592, E(C) = 4/2592
+CUCUCUUR p = 1/3888, E(C) = 3/3888
+CUCUUCCR p = 1/3888, E(C) = 3/3888
+CUCUUCUR p = 1/3888, E(C) = 3/3888
+CUCUUUCR p = 1/3888, E(C) = 3/3888
+CUCUUUUR p = 1/5832, E(C) = 2/5832
 
-CUUCCCCR
-CUUCCCUR
-CUUCCUCR
-CUUCCUUR
-CUUCUCCR
-CUUCUCUR
-CUUCUUCR
-CUUCUUUR
-CUUUCCCR
-CUUUCCUR
-CUUUCUCR
-CUUUCUUR
-CUUUUCCR
-CUUUUCUR
-CUUUUUCR
-CUUUUUUR
+CUUCCCCR p = 1/1728, E(C) = 5/1728
+CUUCCCUR p = 1/2592, E(C) = 4/2592
+CUUCCUCR p = 1/2592, E(C) = 4/2592
+CUUCCUUR p = 1/3888, E(C) = 3/3888
+CUUCUCCR p = 1/2592, E(C) = 4/2592
+CUUCUCUR p = 1/3888, E(C) = 3/3888
+CUUCUUCR p = 1/3888, E(C) = 3/3888
+CUUCUUUR p = 1/5832, E(C) = 2/5832
+CUUUCCCR p = 1/2592, E(C) = 4/2592
+CUUUCCUR p = 1/3888, E(C) = 3/3888
+CUUUCUCR p = 1/3888, E(C) = 3/3888
+CUUUCUUR p = 1/5832, E(C) = 2/5832
+CUUUUCCR p = 1/3888, E(C) = 3/3888
+CUUUUCUR p = 1/5832, E(C) = 2/5832
+CUUUUUCR p = 1/5832, E(C) = 2/5832
+CUUUUUUR p = 1/8748, E(C) = 1/8748
 
 Start with the all C combinations.  Are those easy to calculate? Yes
 E(C) = 2/24 + 3/48 + 4/96 + ...
@@ -373,8 +374,8 @@ E(C) =                             2/24           + 1/36
                            + 3/48        + 4/72            + 1/108
                      + 4/96         9/144          + 6/216            + 1/324
               + 5/192 +    16/288       + 18/432           + 8/648           + 1/972
-        + 6/384 +     25/576 +    14/864 +          30/1296 +         10/1944         + 1/2916
-+7/768  + 
+        + 6/384 +     25/576 +    40/864 +          30/1296 +         10/1944         + 1/2916
++7/768  +      +36/1152   + 60/1728     + 80/2592             /3888             /5832            +1/8748 
      
 = 1/4   +                                                                        + 1/12
 """
