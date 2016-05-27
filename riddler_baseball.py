@@ -9,3 +9,11 @@ finishes in first place?
 
 """
 
+"""
+
+Need to make an assumption about interdivision ve intradivision games.
+Let's start with the way the schedule is doen currently:
+19 games against each of your 4 division opponents.
+86 games outside your division.
+
+"""
