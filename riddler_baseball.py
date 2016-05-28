@@ -40,16 +40,43 @@ def simulateseason(numberteams, winningpercentage, intradivisionperteam, outside
     
     # play the intradivision games
     
-    
+    for teamnumber in range(0, numberteams-1):
+        for opponent in range(teamnumber+1, numberteams):
+            for x in range (0, intradivisionperteam):
+                if random.random() > winningpercentage:
+                    winsperteam[teamnumber] += 1
+                else:
+                    winsperteam[opponent] += 1
     
     return winsperteam
 
+def simulatemultipleseason(numberseasons, numberteams, winningpercentage, intradivisionperteam, outsidedivision):
+    pennantsperteam = []
+    for x in range (0,numberteams):
+        pennantsperteam.append(0)  
+    totalgameswonbywinner = 0 
+        
+    for x in range (0, numberseasons):   
+        winsperteam = simulateseason(numberteams, winningpercentage, intradivisionperteam, outsidedivision)
+        winningnumbergames = max(winsperteam)
+        totalgameswonbywinner += winningnumbergames
+        for x in range(0, numberteams):
+            if winsperteam[x] == winningnumbergames:
+                pennantsperteam[x] += 1  # in the event of a tie, give each team the pennant
+    averagenumberofwinsperwinner = float(totalgameswonbywinner)/numberseasons
+        
+    return averagenumberofwinsperwinner, pennantsperteam
 
 numberteams = 5
 winningpercentage = .5
 intradivisionperteam = 19
 outsidedivision = 86
 
-result = simulateseason(numberteams, winningpercentage, intradivisionperteam, outsidedivision)
-pdb.set_trace() 
+averagewins, pennantsperteam = simulatemultipleseason(10000,numberteams, winningpercentage, intradivisionperteam, outsidedivision)
+print averagewins
+print pennantsperteam
+
+""" 
+Simulation shows the average winner wins 88.8 games.
+"""
 
