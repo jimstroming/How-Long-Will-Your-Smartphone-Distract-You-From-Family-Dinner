@@ -18,12 +18,25 @@ Lets start with the way the schedule is done currently.
 
 """
 
+import random
+import pdb
+
 def simulateseason(numberteams, winningpercentage, intradivisionperteam, outsidedivision):
 
+    
+    # construct the winsperteam list
     winsperteam = []
+    for x in range (0,numberteams):
+        winsperteam.append(0)    
+    
+    
     
     # play the interdivision games
     
+    for teamnumber in range (0, numberteams):
+        for x in range (0, outsidedivision):
+            if random.random() > winningpercentage:
+                winsperteam[teamnumber] += 1
     
     # play the intradivision games
     
@@ -37,6 +50,6 @@ winningpercentage = .5
 intradivisionperteam = 19
 outsidedivision = 86
 
- 
+result = simulateseason(numberteams, winningpercentage, intradivisionperteam, outsidedivision)
+pdb.set_trace() 
 
-print "dummy"
