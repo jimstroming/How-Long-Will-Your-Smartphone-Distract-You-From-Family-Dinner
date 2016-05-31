@@ -78,5 +78,16 @@ print pennantsperteam
 
 """ 
 Simulation shows the average winner wins 88.8 games.
+Let's try doubling the number of games within the division.
+This should increase the record of the average division winner
 """
+
+numberteams = 5
+winningpercentage = .5
+intradivisionperteam = 38
+outsidedivision = 10
+
+averagewins, pennantsperteam = simulatemultipleseason(10000,numberteams, winningpercentage, intradivisionperteam, outsidedivision)
+print averagewins
+print pennantsperteam
 
