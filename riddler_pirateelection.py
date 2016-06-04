@@ -45,4 +45,13 @@ Pirate #9 would propose all 10 pieces for himself.
 The vote would be a 1-1 tie.  Pirate 9 would get all 10 pieces.
 So, Pirate #9 wants the 2 pirate case.  Pirate #10 does not.
 
+3 pirate case.
+Pirate #10 will always vote yes in this case, since he needs to avoid the 2 pirate case.
+Pirate #9 will always vote no in this case, since she wants the 2 pirate case.
+Pirate #8 therefore gives herself all 10 pieces.  
+So, pirates #10 and #9 want to avoid the 3 pirate case.
+
+
+
+
 
