@@ -80,3 +80,23 @@ Pirate #5, #7, and #9 get nothing.
 Pirate #5, #7 and #9 will vote yes if offered 1
 So pirate #3 will offer 1 to #5, 1 to #7, 1 to #9, and keep 7 for himself.
 
+9 pirate case
+Pirate #4, 6, 8, and 10 will vote yes if offered anything
+So pirate #2 will offer 1 to #4, 6, 8, and 10, and keep 6 for herself.
+
+10 pirate case
+Pirates #3, 5, 7, and 9 will vote yes if offered anything
+So pirate #1 will offer 1 to #3, 5, 7, and 9, and keep 6 for herself.
+
+So, the final distribution is
+
+1 -  6 gold
+2 -  0
+3 -  1
+4 -  0
+5 -  1
+6 -  0
+7 -  1
+8 -  0 
+9 -  1
+10 - 0
