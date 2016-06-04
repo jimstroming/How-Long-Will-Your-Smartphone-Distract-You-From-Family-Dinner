@@ -58,4 +58,10 @@ Pirate #10 will vote yes if offered 2 more.
 Pirate #7 will thus offer 1 to pirate #9, and keep 9 for herself.
 Pirate #8 and #10 get nothing in this case.
 
+5 pirate case.
+Pirate #8 and #10 will vote yes if they get anything.
+Pirate #9 will vote yes if offered 2
+Pirate #7 will vote no 
+Pirate #6 can thus offer 1 to Pirate #8, 1 to Pirate #10, and keep 8.
+Pirate #9 and #7 get nothing in this case.
 
