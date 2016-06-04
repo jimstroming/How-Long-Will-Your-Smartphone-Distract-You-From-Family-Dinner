@@ -49,8 +49,12 @@ So, Pirate #9 wants the 2 pirate case.  Pirate #10 does not.
 Pirate #10 will always vote yes in this case, since he needs to avoid the 2 pirate case.
 Pirate #9 will always vote no in this case, since she wants the 2 pirate case.
 Pirate #8 therefore gives herself all 10 pieces.  
-So, pirates #10 and #9 want to avoid the 3 pirate case.
+So, pirates #10 and #9 want to avoid the 3 pirate case, since they get nothing.
 
+4 pirate case.
+Pirate #10 and # 9 will always vote yes, since they need to avoid 3 pirate.
+So Pirate #7 will give himself all 10 pieces.
+Pirate #8, 9, and 10 need to avoid this case.
 
 
 
