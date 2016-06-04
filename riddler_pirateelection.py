@@ -21,3 +21,17 @@ Under this system, how do the PRPLs divide up their gold?
 
 """
 
+""" 
+A few observations:
+The low ranking pirates have very little incentive to vote yes 
+initially, since, when the game gets down to only a few players,
+they will get a lot of gold.
+
+The pirate captain only needs 4 votes besides himself.
+He will likely have to try for the 4 highest ranking.
+
+The pirate captain may very well have no hope.
+
+"""
+
+
