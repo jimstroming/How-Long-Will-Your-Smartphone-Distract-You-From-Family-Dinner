@@ -65,3 +65,18 @@ Pirate #7 will vote no
 Pirate #6 can thus offer 1 to Pirate #8, 1 to Pirate #10, and keep 8.
 Pirate #9 and #7 get nothing in this case.
 
+6 pirate case.
+Pirate #9 and #7 will vote yes if offered anything.
+Pirate #8 and #10 will vote yes if offered 2
+Pirate #6 will vote no
+Pirate #5 will offer 1 to #9, 1 to #7, and keep 8 for herself.
+
+7 pirate case.
+Pirate #6, #8, and #10 will vote yes if offered anything
+So Pirate #4 will offer 1 to #6, 1 to #8, 1 to #10, and keep 7 for himself.
+Pirate #5, #7, and #9 get nothing.
+
+8 pirate case
+Pirate #5, #7 and #9 will vote yes if offered 1
+So pirate #3 will offer 1 to #5, 1 to #7, 1 to #9, and keep 7 for himself.
+
