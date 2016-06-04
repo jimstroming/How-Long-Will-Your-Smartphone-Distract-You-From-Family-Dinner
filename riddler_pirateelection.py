@@ -34,4 +34,15 @@ The pirate captain may very well have no hope.
 
 """
 
+"""
+Let's try working backwards.  Start with 1 pirate, then add more.
+
+1 pirate case.
+Pirate #10 would get all 10 pieces.
+
+2 pirate case.
+Pirate #9 would propose all 10 pieces for himself.
+The vote would be a 1-1 tie.  Pirate 9 would get all 10 pieces.
+So, Pirate #9 wants the 2 pirate case.  Pirate #10 does not.
+
 
