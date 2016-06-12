@@ -18,4 +18,21 @@ in a text file.
 Seems like a variation of the red hat / white had problem.
 Have to understand what one mathematician deduces the others know.
 
+Start with simpler cases:
 
+------
+
+Two mathematicians.
+
+1 knows 2 made a mistake.
+If 1 did not make a mistake,
+then 1 knows that 2 would not have been told anything.
+Thus, when the super says someone made a mistake, 
+2 would know 2 was wrong, if 1 has not make a mistake.
+
+So, if 2 does not resign on Friday, 1 will resign.  Let's assume
+this resignation becomes effective the following Friday.
+The same reasoning apples to 2.
+So no one will resign on Friday, and both will resign the following Friday.
+
+-------- 
