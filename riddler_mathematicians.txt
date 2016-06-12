@@ -35,4 +35,16 @@ this resignation becomes effective the following Friday.
 The same reasoning apples to 2.
 So no one will resign on Friday, and both will resign the following Friday.
 
--------- 
+--------
+
+3 mathematicians.
+
+1 knows 2 and 3 made a mistake.
+if 1 did not make a mistake, then
+2 would know 3 made a mistake, and 3 would know 2 made a mistake.
+This is the two mathematician case.
+So 1 has to wait and see if 2 and 3 both resign on the 2nd Friday.
+Since they won't, 1 will resign on the 3rd friday.
+Same logic applies to 2 and 3, so all three will resign on the 3rd Friday.
+
+ 
