@@ -25,6 +25,11 @@ Start with simpler cases:
 Two mathematicians.
 
 1 knows 2 made a mistake.
+1 doesn't know if 1 made a mistake.
+If 1 made a mistake, too, then 1 knows 2 would no it.
+2 will not know if 2 made a mistake, and 2 will not resign.
+
+
 If 1 did not make a mistake,
 then 1 knows that 2 would not have been told anything.
 Thus, when the super says someone made a mistake, 
@@ -48,3 +53,8 @@ Since they won't, 1 will resign on the 3rd friday.
 Same logic applies to 2 and 3, so all three will resign on the 3rd Friday.
 
  
+-----
+
+So, in the 10 mathematicians case, no mathematician will resign 
+for the first 9 Fridays.  Then, on the 10th Friday, all 10 mathematicians
+will resign.
