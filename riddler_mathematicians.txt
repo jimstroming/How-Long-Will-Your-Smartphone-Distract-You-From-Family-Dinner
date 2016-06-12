@@ -1,0 +1,21 @@
+From http://fivethirtyeight.com/features/solve-the-mystery-of-the-mathematical-mistakes/
+
+A university has 10 mathematicians, each one so proud that, if she learns that she made 
+a mistake in a paper, no matter how long ago the mistake was made, she resigns the next 
+Friday. To avoid resignations, when one of them detects a mistake in the work of another, 
+she tells everyone else but doesn’t inform the mistake-maker. All of them have made 
+mistakes, so each one thinks only she is perfect. One Wednesday, a super-mathematician, 
+whom all respect and believe, comes to visit. She looks at all the papers and says: 
+“Someone here has made a mistake.”
+
+What happens then? Why?
+
+--------
+
+I don't see how coding would help solve this logic problem, so I will solve
+in a text file.
+
+Seems like a variation of the red hat / white had problem.
+Have to understand what one mathematician deduces the others know.
+
+
