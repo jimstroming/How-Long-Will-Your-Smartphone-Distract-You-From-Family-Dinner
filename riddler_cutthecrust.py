@@ -21,27 +21,37 @@ import pdb
 
 
 def calculateclosetocrust(sidelength):
-    center = float(sidelength)/2
+    center = (sidelength)/2
     centercount = 0
     crustcount  = 0
     for x in range (0,sidelength):
         leftdist  = x
         rightdist = sidelength - x
         xdist = min(leftdist, rightdist)
+        #print xdist
+        #pdb.set_trace()
         for y in range(0, sidelength):
             bottomdist = y
             topdist = sidelength - y
             crustdist = min(bottomdist, topdist, xdist)
-            crustdistsquared = crustdist^2
-            centerdistsquared = (center-x)*(center-y)
+            crustdistsquared = crustdist*crustdist
+            centerdistsquared = (center-x)**2+(center-y)**2
             if centerdistsquared < crustdistsquared:
                 centercount += 1
             else:
                 crustcount += 1
-    print centercount
-    print crustcount
     return float(centercount) / (centercount + crustcount)
     
 print calculateclosetocrust(100)    
 print calculateclosetocrust(1000)                    
 print calculateclosetocrust(10000)                    
+
+"""
+Which also gives 21.9%
+
+python riddler_cutthecrust.py
+0.2169
+0.218889
+0.21894865
+
+"""
