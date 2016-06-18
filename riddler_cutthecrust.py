@@ -11,8 +11,32 @@ How much of the sandwich will you eat?
 """
 
 """
+Let's solve mathematically.
 
-Let's try solving pythonically.
+To simplify the problem, let's cut the sandwich into eighths.
+Choose a sandwich with center at (0,0) and length and width = 1
+
+Distance to the center
+z^2 = x^2 + y^2
+z = (x^2 + y^2) ^ 0.5
+Distance to the right edge
+z = 1/2 - x
+
+Set the two equal to find the border
+(x^2 + y^2)^0.5 = 1/2-x
+x^2 + y^2 = 1/4 - x - x^2
+y^2 = 1/4 - x
+y = (1/4 - x)^0.5, x < 1/4
+
+
+
+
+
+"""
+
+"""
+
+Let's also try solving pythonically.
 
 
 """
