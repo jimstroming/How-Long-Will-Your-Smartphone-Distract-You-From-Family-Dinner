@@ -28,8 +28,29 @@ x^2 + y^2 = 1/4 - x - x^2
 y^2 = 1/4 - x
 y = (1/4 - x)^0.5, x < 1/4
 
+This equation only holds until it intersects x=y.   
+At that point, we would cross over into another eighth.
+Let's find that point, where x = y.
 
+x = (1/4 - x)^0.5
+x^2 = 1/4 - x
+x^2 + x - 1/4 = 0
+x = (-1 +- (1+1)^0.5)/2 = .207
 
+So we need to calculate the area of the eight versus the 
+area of the part of the eighth that will be eaten.
+
+Area eighth = 1/2 * b * h = 1/2 * 1/2 * 1/2 = 1/8
+
+Area eaten = Area triangle + Area curved portion
+Area triange = 1/2 * .207 * .207 = .0214
+
+Area curved portion = integral from 1/4 to .207 of (1/4-x)^0.5 dx
+   = -2/3 (1/4 - x)^1.5   evaluated from 1/4 to .207
+   = 0 + 2/3(.25-.207) ^ 1.5  = .0059
+   
+So, percentage eaten = (.0214 + .0059)/(1/8)
+     = 8(.0273) = 21.8%
 
 
 """
@@ -71,11 +92,12 @@ print calculateclosetocrust(1000)
 print calculateclosetocrust(10000)                    
 
 """
-Which also gives 21.9%
+Which gives 21.9%
 
 python riddler_cutthecrust.py
 0.2169
 0.218889
 0.21894865
 
+Both methods agree.
 """
