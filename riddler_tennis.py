@@ -42,12 +42,11 @@ Let's solve the pythonic solution.
 
 class TennisMatch(object):
 
-
     setswon = [0,0]
     gameswon = [0,0]
     pointswon = [0,0]
-    tiebrakescore = [0,0]
     gamepoints = ['0','15','30','40']
+    winneroflastpoint = None
     
     def setscore(self, player1sets, player2sets, player1games, player2games, 
                 player1points, player2points):
@@ -58,7 +57,43 @@ class TennisMatch(object):
         self.pointswon[0] = player1points
         self.pointswon[1] = player2points
 
-
+    def checkwhichplayerwon(self):
+        if self.setswon[0] == 3:
+            return 0
+        if self.setswon[1] == 3:
+            return 1
+    
+    
+    def incrementscore(self,winner):
+        # returns True if the match is over.  False if it continues
+        gamewon = False
+        setwon = False
+        self.pointswon[playerwhowonthepoint] += 1  # add a point to the score
+        # check if we are in a tie breaker
+        if self.gameswon[0] == 7 and self.gameswon[1] == 7 and self.setswon[0] + self.setswon[1] != 4:
+            if (self.pointswon[winner] == 7 and self.pointswon[1-winner]  < 7) or (self.pointswon[winner] > 7 and winneroflastpoint == winner):
+                setwon = True
+            else:
+                winneroflastpoint = winner
+        else:
+            if (self.pointswon[winner] == 4 and self.pointswon[1-winner] < 4) or (self.pointswon[winner] > 4 and self.pointswon[winner]-self.pointswon[1-winner] > 1):
+                gamewon = True
+        if gamewon:
+            self.pointswon[0] = 0
+            self.pointswon[1] = 0
+            self.gameswon[winner] += 1
+            if self.setswon[winner] > 5 and self.setswon[winner] - self.setswon[1-winner] > 1:
+                setwon = True
+            elif self.setswon[winner] == 8: setwon = True
+        if setwon:
+            self.setswon[winner] += 1
+            self.gameswon[0] = 0
+            self.gameswon[1] = 0
+            if setswon[winner] == 3:  return True
+        return False
+    
+    # tie breaker scoring is first to 7 points win, unless the score gets to 6-6
+    # if the score gets to 6-6, then the first to win two points in a row wins.
 
 match = TennisMatch()
 match.setscore(2,0,5,0,3,0)            
