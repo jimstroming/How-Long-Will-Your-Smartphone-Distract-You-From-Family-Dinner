@@ -63,12 +63,15 @@ class TennisMatch(object):
         if self.setswon[1] == 3:
             return 1
     
-    
+    def printscore(self):
+        print "Player 1: ", self.setswon[0] ," sets, ", self.gameswon[0], "games, ",self.gamepoints[self.pointswon[0]]
+        print "Player 2: ", self.setswon[1] ," sets, ", self.gameswon[1], "games, ",self.gamepoints[self.pointswon[1]]
+           
     def incrementscore(self,winner):
         # returns True if the match is over.  False if it continues
         gamewon = False
         setwon = False
-        self.pointswon[playerwhowonthepoint] += 1  # add a point to the score
+        self.pointswon[winner] += 1  # add a point to the score
         # check if we are in a tie breaker
         if self.gameswon[0] == 7 and self.gameswon[1] == 7 and self.setswon[0] + self.setswon[1] != 4:
             if (self.pointswon[winner] == 7 and self.pointswon[1-winner]  < 7) or (self.pointswon[winner] > 7 and winneroflastpoint == winner):
@@ -82,18 +85,23 @@ class TennisMatch(object):
             self.pointswon[0] = 0
             self.pointswon[1] = 0
             self.gameswon[winner] += 1
-            if self.setswon[winner] > 5 and self.setswon[winner] - self.setswon[1-winner] > 1:
+            if self.gameswon[winner] > 5 and self.gameswon[winner] - self.gameswon[1-winner] > 1:
                 setwon = True
-            elif self.setswon[winner] == 8: setwon = True
+            elif self.gameswon[winner] == 8: setwon = True
         if setwon:
             self.setswon[winner] += 1
             self.gameswon[0] = 0
             self.gameswon[1] = 0
-            if setswon[winner] == 3:  return True
+            if self.setswon[winner] == 3:  return True
         return False
     
     # tie breaker scoring is first to 7 points win, unless the score gets to 6-6
     # if the score gets to 6-6, then the first to win two points in a row wins.
 
 match = TennisMatch()
-match.setscore(2,0,5,0,3,0)            
+match.setscore(2,0,5,0,3,0)  
+match.printscore()  
+matchover = False
+while not matchover:
+    matchover = match.incrementscore(1)
+    match.printscore()        
