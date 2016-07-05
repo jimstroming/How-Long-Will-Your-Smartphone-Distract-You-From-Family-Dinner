@@ -103,18 +103,52 @@ class TennisMatch(object):
         
     def playrandompoint(self, chanceofplayer0winning):
         # returns True if the match if over.
-        winner = random.choice([0,1])
-        return self.incrementscore(winner)
-    
+        if random.random() > chanceofplayer0winning:
+            return self.incrementscore(1)
+        return self.incrementscore(0)
+        
+    def playmatch(self, initialscorelist, chanceofplayer0winning):
+        # returns 0 if player 0 wins.  Returns 1 if player 1 wins
+        x = initialscorelist
+        self.setscore(x[0],x[1],x[2],x[3],x[4],x[5])
+        matchover = False
+        while not matchover:
+            matchover = self.playrandompoint(chanceofplayer0winning)
+            #self.printscore()
+        return self.checkwhichplayerwon()    
+            
+    def playmanymatches(self, N, initialscorelist, chanceofplayer0winning):
+        sum = 0
+        for x in range(0,N):
+            sum += self.playmatch(initialscorelist, chanceofplayer0winning)
+        print sum, N
+        return float(sum)/N
     
     # tie breaker scoring is first to 7 points win, unless the score gets to 6-6
     # if the score gets to 6-6, then the first to win two points in a row wins.
 
 match = TennisMatch()
 #match.setscore(2,0,5,0,3,0)  
-match.setscore(0,0,6,6,0,0)
-match.printscore()  
-matchover = False
-while not matchover:
-    matchover = match.playrandompoint(0.5)
-    match.printscore()        
+#match.setscore(0,0,6,6,0,0)
+
+print match.playmanymatches(500000000,[0,2,0,5,0,3],0.99)
+
+
+''' Tried running this with different loop counts
+
+$ python riddler_tennis.py
+298133 10000000
+0.0298133
+$ python riddler_tennis.py
+2981983 100000000
+0.02981983
+$ python riddler_tennis.py
+2979412 100000000
+0.02979412
+$ python riddler_tennis.py
+14887335 500000000
+0.02977467
+
+So, it looks like the answer is approximately 2.98 .
+Bottom line:  Better win one of those 3 match points.  %
+'''
