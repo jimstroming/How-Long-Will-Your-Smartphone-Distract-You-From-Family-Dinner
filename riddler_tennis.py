@@ -23,18 +23,16 @@ The 5th set, on the other hand, continues until someone gets
 a two game lead.
 
 So, your best shot is to be leading 2 sets to none,
-up 5 games to love in the 3rd set, and up 40-0 in the 5th set.
+ties 6 games to 6 in the 3rd set, and up 6-0 in the tiebreaker.
 
-You will now have 3 match points.  Your chance of winning those
-three match points is
+You will now have 6 match points.  Your chance of winning any one those
+six match points is
 
-.01 + (.99)(.01) + (.99)(.99)(.01) = 2.9701 percent
+1-(.99^6) = 5.85%
 
-If you lose those 3 match points, your chance of winning plummets.
-But we need to calculate to see how much the total chance
-is above 2.9701 percent
+If you lose those 6 match points, your chance of winning plummets.
 
-The analytic calculation is complicated, with the tiebreaker and 
+The analytic from that point on is complicated, with the tiebreaker and 
 the 5th sent not having the tie breaker.  
 Let's solve the pythonic solution.
 
@@ -78,12 +76,10 @@ class TennisMatch(object):
         self.pointswon[winner] += 1  # add a point to the score
         # check if we are in a tie breaker
         if self.gameswon[0] == 6 and self.gameswon[1] == 6 and self.setswon[0] + self.setswon[1] != 4:
-            if (self.pointswon[winner] == 7 and self.pointswon[1-winner]  < 7) or (self.pointswon[winner] > 7 and winneroflastpoint == winner):
+            if (self.pointswon[winner] >= 7 and self.pointswon[1-winner] < self.pointswon[winner] - 1):
                 setwon = True
                 self.pointswon[0] = 0
                 self.pointswon[1] = 0
-            else:
-                winneroflastpoint = winner
         else:
             if (self.pointswon[winner] == 4 and self.pointswon[1-winner] < 3) or (self.pointswon[winner] > 4 and self.pointswon[winner]-self.pointswon[1-winner] > 1):
                 gamewon = True
@@ -131,24 +127,20 @@ match = TennisMatch()
 #match.setscore(2,0,5,0,3,0)  
 #match.setscore(0,0,6,6,0,0)
 
-print match.playmanymatches(500000000,[0,2,0,5,0,3],0.99)
+print match.playmanymatches(5000000,[0,2,6,6,0,6],0.99)
 
 
 ''' Tried running this with different loop counts
 
-$ python riddler_tennis.py
-298133 10000000
-0.0298133
-$ python riddler_tennis.py
-2981983 100000000
-0.02981983
-$ python riddler_tennis.py
-2979412 100000000
-0.02979412
-$ python riddler_tennis.py
-14887335 500000000
-0.02977467
 
-So, it looks like the answer is approximately 2.98 .
-Bottom line:  Better win one of those 3 match points.  %
+
+$ python riddler_tennis.py
+29302 500000
+0.058604
+$ python riddler_tennis.py
+292821 5000000
+0.0585642
+
+So, it looks like the answer is approximately 5.86% .
+Bottom line:  Better win one of those 6 match points.  
 '''
