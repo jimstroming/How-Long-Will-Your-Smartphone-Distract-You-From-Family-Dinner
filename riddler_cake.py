@@ -54,7 +54,49 @@ def findoptimalcake(coneheight, conebaseradius, stepsize):
                     maxtop3 = top3
 
     return maxtop1, maxtop2, maxtop3, maxvolume 
-print computecylindervolume(1.0,1.0)
-print computecakelayervolume(0,5.0,10.0,2.0)
-print computetotalcakevolume(1.0,2.0,3.0,5.0,1.0)
-print findoptimalcake(1000,1000,5)
+
+
+# Let's run it a few times to get some data
+
+print "findoptimalcake(1000,1000,2)"
+print findoptimalcake(1000,1000,2)
+print "findoptimalcake(500,500,2)"
+print findoptimalcake(500,500,2)
+print "findoptimalcake(500,1000,2)"
+print findoptimalcake(500,1000,2)
+print "findoptimalcake(1000,500,2)"
+print findoptimalcake(1000,500,5)
+
+"""
+findoptimalcake(1000,1000,5)
+(165, 345, 565, 734806348.00312)
+findoptimalcake(500,500,5)
+(80, 170, 280, 91850744.41300479)
+findoptimalcake(500,1000,5)
+(80, 170, 280, 367402977.65201914)
+findoptimalcake(1000,500,5)
+(160, 340, 560, 183701488.82600957)
+findoptimalcake(1000,1000,2)
+(162, 344, 562, 734839482.3808373)
+findoptimalcake(500,500,2)
+(82, 172, 282, 91852528.83763202)
+findoptimalcake(500,1000,2)
+(82, 172, 282, 367410115.35052806)
+findoptimalcake(1000,500,2)
+(160, 340, 560, 183701488.82600957)
+"""
+
+"""
+The heights are proportional to the height of the cone, and are 
+independent of the radius of the cone.
+
+thickness1 = (162/1000) =     .16
+thickness2 = (344-162)/1000 = .18
+thickness3 = (562-344)/1000 = .22
+
+volume of optimal cake with base 1000, height 1000 = 735,000,000
+volume of cone with base 1000, height 1000 = pi*r^2*h/3 = 1.05 million
+
+% cake fills = 735/1050 = 70%
+
+"""
