@@ -1,5 +1,14 @@
 ''' 
-from http://fivethirtyeight.com/features/
+from http://http://fivethirtyeight.com/features/who-keeps-the-money-you-found-on-the-floor/
+
+You and four statistician colleagues find a $100 bill on the floor of your department’s faculty lounge. 
+None of you have change, so you agree to play a game of chance to divide the money 
+probabilistically. The five of you sit around a table. The game is played in turns. 
+Each turn, one of three things can happen, each with an equal probability: The bill 
+can move one position to the left, one position to the right, or the game ends and the person 
+with the bill in front of him or her wins the game. You have tenure and seniority, 
+so the bill starts in front of you. 
+What are the chances you win the money?
 
 
 
@@ -19,8 +28,8 @@ def runonesimulation():
         increment = random.choice([-1,0,1])
         if increment == 0: return current
         current += increment
-        if current == -1:  current = 3
-        if current == 4: current = 0
+        if current == -1:  current = 4
+        if current == 5: current = 0
         
 def runmanygames(count):
     zerowinners = 0
@@ -41,11 +50,8 @@ print makemanypizzas(1000000)
 """ 
 Which gives
 
-(46, 100, 0.46)
-(487, 1000, 0.487)
-(4677, 10000, 0.4677)
-(46594, 100000, 0.46594)
 
-Which equals 7/15 = 0.467
+
+
 
 """
