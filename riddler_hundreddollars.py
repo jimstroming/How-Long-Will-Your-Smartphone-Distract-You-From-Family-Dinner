@@ -1,7 +1,7 @@
 ''' 
 from http://http://fivethirtyeight.com/features/who-keeps-the-money-you-found-on-the-floor/
 
-You and four statistician colleagues find a $100 bill on the floor of your department’s faculty lounge. 
+You and four statistician colleagues find a $100 bill on the floor of your departments faculty lounge. 
 None of you have change, so you agree to play a game of chance to divide the money 
 probabilistically. The five of you sit around a table. The game is played in turns. 
 Each turn, one of three things can happen, each with an equal probability: The bill 
@@ -18,7 +18,7 @@ import random
 import math
 import pdb
 
-# Now let's try the pythonic solution
+# Let's try the pythonic solution
 
 def runonesimulation():
 
@@ -41,11 +41,9 @@ def runmanygames(count):
     return zerowinners, count, float(zerowinners)/count        
     
         
-print runmanygames(100)
-print runmanygames(1000)
-print runmanygames(10000)
-print runmanygames(100000)
-print makemanypizzas(1000000)
+for x in range(0,10):
+    print runmanygames(1000000)
+
 
 """ 
 Which gives
