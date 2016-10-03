@@ -22,6 +22,14 @@ If they lose, we must end up $100 behind.
 So the wager on game 7 must be $100, and the initial condition entering 
 game 7 must have been we were dead even.
 
+Now let's do game 6.
+Entering game 6, one team will be ahead 3-2.
+Let's say the Cubs are up 3-2.
+If the Cubs win game 6, then we must end up $100 up, since the Series is over
+If the Cubs lose game 6, then we must end up even, since the Series is tied
+heading to a game 7.
+So the game 6 wager must be $50, and we must be up $50 heading into game 6 
+if the Cubs are up 3-2, or down $50 if the Cubs are down 2-3.
  
 
 
