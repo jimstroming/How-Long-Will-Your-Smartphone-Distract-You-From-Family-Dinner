@@ -66,6 +66,12 @@ If the Cubs win, we go up $37.50.
 If the Cubs lose, we go down $37.50
 So the wager must be $37.50.
 
+Getting closer now.  On to game 2.
+In game 2, one team is up 1-0.
+If the Cubs are up 1-0 and win game 1, we must go up $62.50.
+If the Cubs are up 1-0 and lose, we must be even.
+So the wager must be $31.25, and we were up or down $31.25 going in.
+
 
 
 
