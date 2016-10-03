@@ -45,6 +45,16 @@ If the Cubs lose, then we must be at the game 6 initial condition of up $50.
 So if the series is 3-1, we wager $25, and we must have had $75 going into game
 5 is the Cubs were up 3-1.
 
+Game 4 has two different initial conditions:  3-0 or 2-1.
+If the Cubs are up 3-0 and win game 4, then we must be up $100.
+If the Cubs are up 3-0 and lose, we must be up $75.
+So if the series is 3-0, we wager $12.50, and we are either up or down $87.50 
+going into the game.
+
+If the Cubs are up 2-1 and win game 4, then we must be up $75 going into the game.
+If the Cubs lose, then we are tied and even.
+So the wager must be $37.50, and we were up or down $37.50 entering the game.
+
 
 
 
