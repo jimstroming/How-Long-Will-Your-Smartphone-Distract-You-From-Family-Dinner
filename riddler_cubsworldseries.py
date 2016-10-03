@@ -123,14 +123,52 @@ def simulategame():
           if random.choice([True, False]):
               winnings += getwager(awins, bwins)          
               awins += 1
-              print awins, bwins, winnings             
+              #print awins, bwins, winnings             
               if awins == 4: return awins, bwins, winnings
           else:
               winnings -= getwager(awins, bwins)          
               bwins += 1
-              print awins, bwins, winnings               
+              #print awins, bwins, winnings               
               if bwins == 4: return awins, bwins, winnings
 
-   
+
+def simulategames(numbergames):
+    for n in range(0,numbergames):
+        awins,bwins,winnings = simulategame()
+        if abs(winnings) != 100:
+            print "ERROR"
+            print awins, bwins, winnings
+            return 
+        print awins, bwins, winnings
     
-print simulategame()    
+print simulategames(10000)    
+
+
+"""
+4 3 100.0
+2 4 -100.0
+4 0 100.0
+3 4 -100.0
+4 1 100.0
+3 4 -100.0
+4 3 100.0
+4 1 100.0
+4 2 100.0
+2 4 -100.0
+2 4 -100.0
+2 4 -100.0
+0 4 -100.0
+2 4 -100.0
+3 4 -100.0
+4 3 100.0
+0 4 -100.0
+3 4 -100.0
+0 4 -100.0
+3 4 -100.0
+4 3 100.0
+4 3 100.0
+1 4 -100.0
+3 4 -100.0
+
+It looks like our betting strategy is correct.
+"""
