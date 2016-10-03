@@ -87,11 +87,50 @@ Game 5:  wager $25.00 if the series is 3-1
 Game 6:  wager $50.00
 Game 7:  wager $100.00
 
+"""
+"""
+Let's run a python simulation of these rules to see if they are correct.
 
 """
 
 import sys
 import random
 
+# create the wager dictionary
+wager = {0**4+0:31.25,
+         1**4+0:31.25,
+         2**4+0:25.00,
+         1**4+1:37.50,
+         3**4+0:12.50,
+         2**4+1:37.50,
+         3**4+1:25.00,
+         2**4+2:50.00,
+         3**4+2:50.00,
+         3**4+3:100.00}
 
- 
+def getwager(teamawins, teambwins):
+    if teamawins > teambwins:
+        key = teamawins**4+teambwins
+    else:
+        key = teambwins**4+teamawins
+    return wager[key]     
+
+
+def simulategame():
+    awins = bwins = 0
+    winnings = 0
+    while (awins < 4 and bwins < 4):
+          if random.choice([True, False]):
+              winnings += getwager(awins, bwins)          
+              awins += 1
+              print awins, bwins, winnings             
+              if awins == 4: return awins, bwins, winnings
+          else:
+              winnings -= getwager(awins, bwins)          
+              bwins += 1
+              print awins, bwins, winnings               
+              if bwins == 4: return awins, bwins, winnings
+
+   
+    
+print simulategame()    
