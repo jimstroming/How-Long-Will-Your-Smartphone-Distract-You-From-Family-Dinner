@@ -30,7 +30,21 @@ If the Cubs lose game 6, then we must end up even, since the Series is tied
 heading to a game 7.
 So the game 6 wager must be $50, and we must be up $50 heading into game 6 
 if the Cubs are up 3-2, or down $50 if the Cubs are down 2-3.
- 
+
+On to game 5.
+Game 5 has a couple different possibilities:
+The series could be ties 2-2, or one team could be ahead 3-1.
+
+If the series is tied 2-2, then we currently must be even in our winnings.
+If the Cubs win, then we must end up at the game 6 initial condition of up $50.
+If the Cubs lose, we most be down $50.
+So if the series is tied 2-2, we wager $50 on game 6.
+
+If the Cubs are up 3-1 entering game 5, then if the cubs win, we must have $100.
+If the Cubs lose, then we must be at the game 6 initial condition of up $50.
+So if the series is 3-1, we wager $25, and we must have had $75 going into game
+5 is the Cubs were up 3-1.
+
 
 
 
