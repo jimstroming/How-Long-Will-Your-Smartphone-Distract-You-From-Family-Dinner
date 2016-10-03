@@ -72,8 +72,20 @@ If the Cubs are up 1-0 and win game 1, we must go up $62.50.
 If the Cubs are up 1-0 and lose, we must be even.
 So the wager must be $31.25, and we were up or down $31.25 going in.
 
+Which takes us to game 1.
+From the above, we wager $31.25 on game 1.
 
-
+So now we have the complete betting rules:
+Game 1:  wager $31.25
+Game 2:  wager $31.25
+Game 3:  wager $25.00 if the series is 2-0
+         wager $37.50 if the series is 1-1
+Game 4:  wager $12.50 if the series is 3-0
+         wager $37.50 if the series is 2-1
+Game 5:  wager $25.00 if the series is 3-1
+         wager $50.00 if the series is 2-2
+Game 6:  wager $50.00
+Game 7:  wager $100.00
 
 
 """
