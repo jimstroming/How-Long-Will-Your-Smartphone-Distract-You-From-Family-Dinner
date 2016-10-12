@@ -16,6 +16,8 @@ the zebra (3 by 2), and the giraffe (4 by 1)?
 
 # Lets solve this in python recursively
 
+import sys
+import pdb
 
 # define the movelist
 
@@ -30,19 +32,41 @@ board = [[False, False, False, False, False, False, False, False],
          [False, False, False, False, False, False, False, False],
          [False, False, False, False, False, False, False, False]]
          
+testboard = [[False, False, False, False, True, True, True, True],
+             [False, False, False, False, True, True, True, True],
+             [False, False, False, False, True, True, True, True],
+             [False, False, False, False, True, True, True, True],
+             [True,  True,  True,  True,  True, True, True, True],
+             [True,  True,  True,  True,  True, True, True, True],
+             [False, False, False, False, True, True, True, True],
+             [False, False, False, False, True, True, True, True]]     
+         
 def searchboard(board, movelist, movecount, currentx, currenty):
     """
-    input to routine is the board configurations and the move count
-    routine returns the deepest move reached
+    input to routine are
+    the board configurations
+    the move count
     currentx and currenty are the current position of the knight
+    routine returns the deepest move reached
+
     """
     highestcount = movecount
-    #for move in movelist:
+    # apply the incoming move
+    print  currentx, currenty, movecount, highestcount
+    board[currenty][currentx] = True
+    for move in movelist:
+        newx = currentx + move[0]
+        newy = currenty + move[1]
+        if newx < 0 or newy < 0: continue
+        if newx > 7 or newy > 7: continue
+        if board[newy][newx]: continue
+        newmovecount = searchboard(fastcopy(board),movelist,movecount+1,newx,newy)
+        highestcount = max(highestcount, newmovecount) 
         
-
     return highestcount
     
-def fastcopy(self, b):
+def fastcopy(b):
+    #pdb.set_trace()
     return     [[b[0][0],b[0][1],b[0][2],b[0][3],b[0][4],b[0][5],b[0][6],b[0][7]],
                     [b[1][0],b[1][1],b[1][2],b[1][3],b[1][4],b[1][5],b[1][6],b[1][7]],
                     [b[2][0],b[2][1],b[2][2],b[2][3],b[2][4],b[2][5],b[2][6],b[2][7]],
@@ -53,4 +77,4 @@ def fastcopy(self, b):
                     [b[7][0],b[7][1],b[7][2],b[7][3],b[7][4],b[7][5],b[7][6],b[7][7]]]    
     
 
-print searchboard(board, knightlist, 0, 0, 0)
+print searchboard(fastcopy(testboard), knightlist, 0, 0, 0)
