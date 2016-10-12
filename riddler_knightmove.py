@@ -16,6 +16,20 @@ the zebra (3 by 2), and the giraffe (4 by 1)?
 
 # Lets solve this in python recursively
 
+
+# define the movelist
+
+knightlist = [[-2,-1],[-2,1],[-1,-2],[-1,2],[1,-2],[1,2],[2,-1],[2,1]]
+
+board = [[False, False, False, False, False, False, False, False],
+         [False, False, False, False, False, False, False, False],
+         [False, False, False, False, False, False, False, False],
+         [False, False, False, False, False, False, False, False],
+         [False, False, False, False, False, False, False, False],
+         [False, False, False, False, False, False, False, False],
+         [False, False, False, False, False, False, False, False],
+         [False, False, False, False, False, False, False, False]]
+         
 def searchboard(board, movelist, movecount):
     """
     input to routine is the board configurations and the move count
@@ -23,5 +37,6 @@ def searchboard(board, movelist, movecount):
     """
     highestcount = movecount
 
-    return hightestcount
+    return highestcount
 
+print searchboard(board, knightlist, 0)
