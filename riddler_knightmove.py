@@ -15,3 +15,9 @@ the zebra (3 by 2), and the giraffe (4 by 1)?
 """
 
 
+# Lets solve this in python recursively
+
+# input to routine is the board configurations and the move count
+
+# routine returns the deepest move reached
+
