@@ -75,6 +75,9 @@ def searchboard(board, movelist, movecount, currentx, currenty):
  
  
 def searchstartpositions(board, movelist, startpositions):
+    """
+    Searches starting from each startposition
+    """
     highestcount = 0
     for position in startpositions:
         count = searchboard(fastcopy(board), movelist, 0, position[0], position[1])
@@ -94,5 +97,5 @@ def fastcopy(b):
                     [b[7][0],b[7][1],b[7][2],b[7][3],b[7][4],b[7][5],b[7][6],b[7][7]]]    
     
 
-print searchstartpositions(testboard, knightlist, startpositions)
-#print searchboard(fastcopy(testboard), knightlist, 0, 0, 0)
+#print searchstartpositions(board, knightlist, startpositions)
+print searchboard(fastcopy(board), knightlist, 0, 0, 0)
