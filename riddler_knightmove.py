@@ -31,7 +31,9 @@ board = [[False, False, False, False, False, False, False, False],
          [False, False, False, False, False, False, False, False],
          [False, False, False, False, False, False, False, False],
          [False, False, False, False, False, False, False, False]]
-         
+      
+      
+# use a partially filled board for testing, since it finishes much sooner         
 testboard = [[False, False, False, False, True, True, True, True],
              [False, False, False, False, True, True, True, True],
              [False, False, False, False, True, True, True, True],
@@ -39,7 +41,13 @@ testboard = [[False, False, False, False, True, True, True, True],
              [True,  True,  True,  True,  True, True, True, True],
              [True,  True,  True,  True,  True, True, True, True],
              [False, False, False, False, True, True, True, True],
-             [False, False, False, False, True, True, True, True]]     
+             [False, False, False, False, True, True, True, True]]  
+             
+# using symmetry, we only need to search 10 starting positions             
+startpositions = [[0,0],[0,1],[0,2],[0,3],
+                        [1,1],[1,2],[1,3],
+                              [2,2],[2,3],
+                                    [3,3]]  
          
 def searchboard(board, movelist, movecount, currentx, currenty):
     """
@@ -52,7 +60,7 @@ def searchboard(board, movelist, movecount, currentx, currenty):
     """
     highestcount = movecount
     # apply the incoming move
-    print  currentx, currenty, movecount, highestcount
+    #print  currentx, currenty, movecount, highestcount
     board[currenty][currentx] = True
     for move in movelist:
         newx = currentx + move[0]
@@ -64,6 +72,15 @@ def searchboard(board, movelist, movecount, currentx, currenty):
         highestcount = max(highestcount, newmovecount) 
         
     return highestcount
+ 
+ 
+def searchstartpositions(board, movelist, startpositions):
+    highestcount = 0
+    for position in startpositions:
+        count = searchboard(fastcopy(board), movelist, 0, position[0], position[1])
+        print count
+        highestcount = max(highestcount, count)
+    return highestcount     
     
 def fastcopy(b):
     #pdb.set_trace()
@@ -77,4 +94,5 @@ def fastcopy(b):
                     [b[7][0],b[7][1],b[7][2],b[7][3],b[7][4],b[7][5],b[7][6],b[7][7]]]    
     
 
-print searchboard(fastcopy(testboard), knightlist, 0, 0, 0)
+print searchstartpositions(testboard, knightlist, startpositions)
+#print searchboard(fastcopy(testboard), knightlist, 0, 0, 0)
