@@ -36,10 +36,10 @@ binaryboard = 0
 testbinaryboard = 2**64 - 1  - (2**24-1)
       
 # use a partially filled board for testing, since it finishes much sooner         
-testboard = [[False, False, False, False, False, False, False, False],
-             [False, False, False, False, False, False, False, False],
-             [False, False, False, False, False, False, False, False],
-             [True,  True,  True,  True,  True,  True,  True,  True ],
+testboard = [[False, False, False, False, True,  True,  True,  True ],
+             [False, False, False, False, False,  True,  True,  True ],
+             [False, False, False, False, True,  True,  True,  True ],
+             [False, False, False, False, True,  True,  True,  True ],
              [True,  True,  True,  True,  True,  True,  True,  True ],
              [True,  True,  True,  True,  True,  True,  True,  True ],             
              [True,  True,  True,  True,  True,  True,  True,  True ],
@@ -51,6 +51,10 @@ startpositions = [[0,0],[0,1],[0,2],[0,3],
                               [2,2],[2,3],
                                     [3,3]]  
                                     
+allstartpositions = [[0,0],[0,1],[0,2],[0,3],                                   
+                     [1,0],[1,1],[1,2],[1,3],
+                     [2,0],[2,1],[2,2],[2,3], 
+                     [3,0],[3,1],[3,2],[2,3]]
                                     
 def searchbinaryboard(board, movelist, movecount, currentx, currenty):                                   
     """
@@ -93,7 +97,7 @@ def searchboard(board, movelist, movecount, currentx, currenty):
     """
     highestcount = movecount
     # apply the incoming move
-    print  currentx, currenty, movecount, highestcount
+    #print  currentx, currenty, movecount, highestcount
     board[currenty][currentx] = True
     for move in movelist:
         newx = currentx + move[0]
@@ -130,7 +134,7 @@ def fastcopy(b):
                     [b[7][0],b[7][1],b[7][2],b[7][3],b[7][4],b[7][5],b[7][6],b[7][7]]]    
     
 
-#print searchstartpositions(board, knightlist, startpositions)
+print searchstartpositions(testboard, knightlist, allstartpositions)
 #print searchboard(fastcopy(testboard), knightlist, 0, 0, 0)
 #print searchbinaryboard(testbinaryboard, knightlist, 0, 0, 0)
-print searchbinaryboard(binaryboard, knightlist, 0, 0, 0)
+#print searchbinaryboard(binaryboard, knightlist, 0, 0, 0)
