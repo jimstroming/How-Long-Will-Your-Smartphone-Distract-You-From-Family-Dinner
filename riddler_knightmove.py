@@ -67,7 +67,7 @@ def searchbinaryboard(board, movelist, movecount, currentx, currenty):
     """
     highestcount = movecount
     # apply the incoming move
-    print movecount
+    if movecount > 61: print movecount
     squarenumber = 8*currenty+currentx
     movedboard = board + 2**squarenumber
     #board[currenty][currentx] = True
@@ -134,10 +134,10 @@ def fastcopy(b):
                     [b[7][0],b[7][1],b[7][2],b[7][3],b[7][4],b[7][5],b[7][6],b[7][7]]]    
     
 
-print searchstartpositions(testboard, knightlist, allstartpositions)
+#print searchstartpositions(testboard, knightlist, allstartpositions)
 #print searchboard(fastcopy(testboard), knightlist, 0, 0, 0)
 #print searchbinaryboard(testbinaryboard, knightlist, 0, 0, 0)
-#print searchbinaryboard(binaryboard, knightlist, 0, 0, 0)
+print searchbinaryboard(binaryboard, knightlist, 0, 0, 0)
 
 """
 
@@ -150,5 +150,26 @@ that uses 15/16 of the squares in each quadrant, and each quadrant
 feeds into the one before.
 That gives us 63 - 4 = 59 move length.
 And 59 is a length we have seen in the full simulation.
+
+If we add a conditional to the print statement, we can see
+in real time the maximum length.
+I definitely see length 63.
+
+62
+62
+62
+62
+62
+62
+62
+63
+62
+62
+62
+62
+62
+62
+
+So 63 is the largest length non-repeating path for a knight.
 
 """ 
