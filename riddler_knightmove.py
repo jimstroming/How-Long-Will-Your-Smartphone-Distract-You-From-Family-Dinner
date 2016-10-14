@@ -72,7 +72,7 @@ def searchbinaryboard(board, movelist, movecount, currentx, currenty):
     """
     highestcount = movecount
     # apply the incoming move
-    if movecount > 55: print movecount
+    if movecount > 56: print movecount
     squarenumber = 8*currenty+currentx
     movedboard = board + 2**squarenumber
     #board[currenty][currentx] = True
@@ -194,12 +194,12 @@ For zebra, the max is at least 52
 51
 52
 52
-For giraffe, the max is at least 55
-55
-55
-54
-55
-54
-55
-54
+For giraffe, the max is at least 56
+56
+56
+56
+56
+56
+56
+56
 """ 
