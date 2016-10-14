@@ -22,6 +22,11 @@ import pdb
 # define the movelist
 
 knightlist = [[-2,-1],[-2,1],[-1,-2],[-1,2],[1,-2],[1,2],[2,-1],[2,1]]
+camellist = [[-3,-1],[-3,1],[-1,-3],[-1,3],[1,-3],[1,3],[3,-1],[3,1]]
+zebralist = [[-3,-2],[-3,2],[-2,-3],[-2,3],[2,-3],[2,3],[3,-2],[3,2]]
+giraffelist = [[-4,-1],[-4,1],[-1,-4],[-1,4],[1,-4],[1,4],[4,-1],[4,1]]
+
+
 
 board = [[False, False, False, False, False, False, False, False],
          [False, False, False, False, False, False, False, False],
@@ -67,7 +72,7 @@ def searchbinaryboard(board, movelist, movecount, currentx, currenty):
     """
     highestcount = movecount
     # apply the incoming move
-    if movecount > 61: print movecount
+    if movecount > 55: print movecount
     squarenumber = 8*currenty+currentx
     movedboard = board + 2**squarenumber
     #board[currenty][currentx] = True
@@ -137,7 +142,7 @@ def fastcopy(b):
 #print searchstartpositions(testboard, knightlist, allstartpositions)
 #print searchboard(fastcopy(testboard), knightlist, 0, 0, 0)
 #print searchbinaryboard(testbinaryboard, knightlist, 0, 0, 0)
-print searchbinaryboard(binaryboard, knightlist, 0, 0, 0)
+print searchbinaryboard(binaryboard, giraffelist, 0, 0, 0)
 
 """
 
@@ -172,4 +177,29 @@ I definitely see length 63.
 
 So 63 is the largest length non-repeating path for a knight.
 
+Next, I am a huge fan of fairy chess.  We used to play it in the lab,
+as it is so much more interesting than regular chess.
+So let's run the simulation for some of the fairy pieces.
+
+For the camel, the max is at least 31.
+31
+31
+31
+31
+For zebra, the max is at least 52
+52
+51
+52
+52
+51
+52
+52
+For giraffe, the max is at least 55
+55
+55
+54
+55
+54
+55
+54
 """ 
