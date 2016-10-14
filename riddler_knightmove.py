@@ -138,3 +138,17 @@ print searchstartpositions(testboard, knightlist, allstartpositions)
 #print searchboard(fastcopy(testboard), knightlist, 0, 0, 0)
 #print searchbinaryboard(testbinaryboard, knightlist, 0, 0, 0)
 #print searchbinaryboard(binaryboard, knightlist, 0, 0, 0)
+
+"""
+
+Even after optimization, the full search has too many levels.
+There are a couple options we can take while we wait for the full simulation
+to complete.
+We can construct a piecewise solution.
+If we divide the board into four quadrants, we can construct a solution
+that uses 15/16 of the squares in each quadrant, and each quadrant
+feeds into the one before.
+That gives us 63 - 4 = 59 move length.
+And 59 is a length we have seen in the full simulation.
+
+""" 
