@@ -70,3 +70,27 @@ One possible districting is below
 ---   ------   |
 |r  r  r  r |B |
 -----------------
+
+Now, let's move on to the classic solution.
+The Colorado diagram has 51 blue squares and 89 red squares.
+
+Because of the assumption that a tied district goes in our favor,
+the blue best case would be 5 split decisions.
+District   Blue     Red     Winner
+    1       10      10       Blue    
+    2       10      10       Blue    
+    3       10      10       Blue    
+    4       10      10       Blue    
+    5       10      10       Blue    
+    6        1       9       Red
+    7        0      20       Red
+    
+Which would give Blue a 5 district to 2 advantage.
+Interestingly, because of the tie rule, the same districting
+would give red a 7 district to 0 advantage.
+    
+This is the best case scenario, but we still have to show
+if such a districting can be drawn.
+
+
+"""
