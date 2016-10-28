@@ -50,3 +50,12 @@ r  B  B  r  r  B  B  B  B  B  B  B  r  r
 
 
 """
+
+"""
+
+Lets start with the simpler Riddler express problem, first.
+There are 9 blue squares and 16 red squares.
+For blue to win the election, we need blue to win 3 of the 
+districts 3 to 2.  Red wins the other 2 districts 5 to 0.
+
+
