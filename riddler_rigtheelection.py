@@ -82,12 +82,12 @@ District   Blue     Red     Winner
     3       10      10       Blue    
     4       10      10       Blue    
     5       10      10       Blue    
-    6        1       9       Red
+    6        1      19       Red
     7        0      20       Red
     
 Which would give Blue a 5 district to 2 advantage.
 Interestingly, because of the tie rule, the same districting
-would give red a 7 district to 0 advantage.
+would give red a 7 district to 0 advantage in the red best case.
     
 This is the best case scenario, but we still have to show
 if such a districting can be drawn.
@@ -96,17 +96,17 @@ Fortunately, it is possible to draw such a districting.
 It does not even require python.
 
 ------------------------------------------
-|r  r  r  r  B  r  B  B  r  r  r  r  r  r|
-|
-|r  r  r  B  B  r  B  B  r  r  r  r  r  r|
-|
-|r  r  r  r  B  r  r  B  B  B  r  r  r  r|
-|
-|r  r  r  r  B  B  B  B  B  B  r  r  r  r|
-|
-|r  r  r  B  B  B  r  r  r  r  r  r  r  r|
-|
-|r  r  r  B  B  r  r  r  r  r  r  r  r  r|
+|r  r  r  r  B  r |B  B |r  r  r  r  r  r|
+|                 |     |
+|r  r  r  B  B  r |B  B |r  r  r  r  r  r|
+|-----------
+|r  r  r |r |B  r |r  B  B  B |r  r  r  r|
+|     |
+|r  r |r  r  B  B  B  B  B  B  r  r  r  r|
+|     |
+|r  r |r  B  B  B  r  r  r  r  r  r  r  r|
+|     |
+|r  r |r  B  B  r  r  r  r  r  r  r  r  r|
 |
 |r  r  r  B  B  B  r  r  B  B  r  r  r  r|
 |
