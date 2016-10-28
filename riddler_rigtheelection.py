@@ -96,20 +96,20 @@ Fortunately, it is possible to draw such a districting.
 It does not even require python.
 
 ------------------------------------------
-|r  r  r  r  B  r  B  B  r  r  r  r  r  r|
-|                                        |
-|r  r  r  B  B  r  B  B  r  r  r  r  r  r|
-|           
-|r  r  r  r  B  r  r  B  B  B  r  r  r  r|
-|      
-|r  r  r  r  B  B  B  B  B  B  r  r  r  r|
-|      
-|r  r  r  B  B  B  r  r  r  r  r  r  r  r|
-|      
-|r  r  r  B  B  r  r  r  r  r  r  r  r  r|
+|r  r |r  r  B  r  B  B  r |r  r  r  r  r|
+|     |                    |             |
+|r  r |r  B  B  r  B  B  r |r  r  r  r  r|
+|      ---                 |  -----------|
+|r  r  r |r  B  r  r  B  B |B |r  r  r |r|
+|         -----------------   |        | |
+|r  r  r  r |B  B  B  B  B  B |r  r  r |r|
+|         ---     ------------         | |
+|r  r  r |B  B  B |r  r  r |r  r  r  r  r|
+|         --------          --
+|r  r  r |B  B  r  r  r  r  r |r  r  r  r|
 |
-|r  r  r  B  B  B  r  r  B  B  r  r  r  r|
-|
+|r  r  r |B  B  B  r  r  B  B  r  r  r  r|
+|---------
 |B  B  B  r  B  B  B  r  B  B  r  r  r  r|
 |
 |r  r  B  r  r  r  B  B  B  B  B  B  r  r|
