@@ -26,6 +26,22 @@ If N is odd, then for your vote to matter, your vote must either force
 a tie or result in no tie.  So either candidate A is up by one vote, 
 or candidate B is up by one vote.  
 
+Let's work through the first few cases manually.  See if we 
+notice a pattern.
+
+For N = 1, there is one other voter.  Your vote matters.
+P(1) = 1.
+
+For N = 2, the two other voters must be split for your
+vote to matter.  
+AA
+AB
+BA
+BB
+One half of these cases are 1-1 ties, 
+so P(2) = 1/2
+
+
 
 
 """
