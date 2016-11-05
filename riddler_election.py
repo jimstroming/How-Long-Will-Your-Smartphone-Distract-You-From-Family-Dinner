@@ -32,8 +32,8 @@ notice a pattern.
 For N = 1, there is one other voter.  Your vote matters.
 P(1) = 1.
 
-For N = 2, the two other voters must be split for your
-vote to matter.  
+For N = 2, the two other voters must be split betweend candidate 
+A and B for your vote to matter.  
 AA
 AB
 BA
@@ -55,11 +55,24 @@ BBB - bad
 
 So P(3) = 3/4
 
-
-
-
-
-
+To go further than this, let's construct a tree where we count
+the number of votes for Candidate A
+                    
+                        1/2           1/2     
+                        0              1
+                       /\             /\
+                      0  1           1  2
+                       1/4     2/4    1/4
+                        0       1      2
+                       /\      /\      /\
+                      0  1    1 2     2  3
+                      1/8  3/8    3/8     1/8 
+                       0    1      2       3
+                      /\   /\     /\      /\
+                  1/16  4/16  6/16  4/16    1/16
+                    0     1     2      3      4
+                       
+                       
 """
 """
 Let's run a python simulation of these rules to see if they are correct.
