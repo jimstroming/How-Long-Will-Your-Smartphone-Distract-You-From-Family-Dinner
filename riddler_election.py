@@ -41,6 +41,22 @@ BB
 One half of these cases are 1-1 ties, 
 so P(2) = 1/2
 
+For N=3, as long as all three do not vote for the same candidate, 
+you vote matters
+
+AAA - bad
+AAB
+ABA
+ABB
+BAA
+BAB
+BBA
+BBB - bad
+
+So P(3) = 3/4
+
+
+
 
 
 
