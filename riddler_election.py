@@ -131,15 +131,67 @@ def choose(n, k):
         
         
 def chanceofvotemattering(n):
+    cutoff = 1000
 
-    if n <= 1: return 1
+    if n <= 1: return n,1
     if n % 2 == 0:
         numerator =  choose(n-1,(n/2) - 1)
         denominator = 2**(n-1)
-        return denominator // numerator
+        if n < cutoff: return n,(denominator + .001) / numerator
+        return n,denominator // numerator
     else:
         numerator = choose(n, ((n+1)/2)-1) 
         denominator = 2**(n-1)
-        return denominator // numerator    
-print chanceofvotemattering(30000)
-print chanceofvotemattering(60000)
+        if n < cutoff: return n,(denominator + .001) / numerator
+        return n,denominator // numerator   
+for n in range(0,10):
+    print chanceofvotemattering(n)         
+print chanceofvotemattering(50)   
+print chanceofvotemattering(999)   
+print chanceofvotemattering(1001)
+print chanceofvotemattering(7500)  
+print chanceofvotemattering(  15625)     
+print chanceofvotemattering(  31250)
+print chanceofvotemattering(  62500)
+print chanceofvotemattering( 125000)
+print chanceofvotemattering( 250000)
+print chanceofvotemattering( 500000)
+print chanceofvotemattering(1000000)
+print chanceofvotemattering(1000001)
+
+"""
+Which give the following results
+
+(0, 1)
+(1, 1)
+(2, 2.001)
+(3, 1.3336666666666668)
+(4, 2.667)
+(5, 1.6001)
+(6, 3.2001)
+(7, 1.8286000000000002)
+(8, 3.6571714285714285)
+(9, 2.0317539682539683)
+(50, 8.90668859655418)
+(999, 19.821591265647665)
+(1001, 19L)
+(7500, 108L)
+(15625, 78L)
+(31250, 221L)
+(62500, 313L)
+(125000, 443L)
+(250000, 626L)
+(500000, 886L)
+(1000000, 1253L)
+(1000001, 626L)
+
+This is somewhat surprising.
+In an election with 1 million and 1 other voters, all voting randomly,
+you have a 1 in 626 chance of swinging the election.
+
+Of course, this is an artificial case, since no elections
+are exactly fifty-fifty.   But just in case, be sure to 
+vote on Tuesday!
+
+
+"""
