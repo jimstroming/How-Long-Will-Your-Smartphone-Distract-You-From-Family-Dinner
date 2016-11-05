@@ -91,23 +91,55 @@ P(n) = 1, 2/4, 6/16, 20/64, ...
      
 The numerator of both show a pattern: 1, 3, 10, 35
 This is recognizable as the odd graph O3, where O3 is
-2n-1 choose n-1      
+2n-1 choose n-1    or C(2n-1, n-1)   
 
 Using this, we can solve for P(n)
 
 
 
 P(n) = 1    for n <= 1
-P(n) = (n-1 choose n/2 - 1)      *(2^(n-1))     for even n > 1
-P(n) = (n   choose ((n+1)/2)-1 ) *(2^(n-1))     for odd n > 1   
+P(n) = C(n-1,n/2 - 1)      /(2^(n-1))     for even n > 1
+P(n) = C(n,  ((n+1)/2)-1 ) /(2^(n-1))     for odd n > 1   
         
                        
 """
 """
-Let's run a python simulation of these rules to see if they are correct.
+Let's run a python simulation of these rules to see if they are correct,
+using a binomial coefficient routine from Andrew Dalke
 
 """
 
 import sys
 import random
 
+
+
+def choose(n, k):
+    """
+    A fast way to calculate binomial coefficients by Andrew Dalke (contrib).
+    """
+    if 0 <= k <= n:
+        ntok = 1
+        ktok = 1
+        for t in xrange(1, min(k, n - k) + 1):
+            ntok *= n
+            ktok *= t
+            n -= 1
+        return ntok // ktok
+    else:
+        return 0
+        
+        
+def chanceofvotemattering(n):
+
+    if n <= 1: return 1
+    if n % 2 == 0:
+        numerator =  choose(n-1,(n/2) - 1)
+        denominator = 2**(n-1)
+        return denominator // numerator
+    else:
+        numerator = choose(n, ((n+1)/2)-1) 
+        denominator = 2**(n-1)
+        return denominator // numerator    
+print chanceofvotemattering(30000)
+print chanceofvotemattering(60000)
