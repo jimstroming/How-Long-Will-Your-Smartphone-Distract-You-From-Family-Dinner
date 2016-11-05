@@ -57,24 +57,50 @@ So P(3) = 3/4
 
 To go further than this, let's construct a tree where we count
 the number of votes for Candidate A
-                    
-                           1/2      1/2     
-                            0        1
-                            /\      /\
-                       1/4     2/4    1/4
-                        0       1      2
-                       /\      /\      /\
-                      1/8  3/8    3/8     1/8 
-                       0    1      2       3
-                      /\   /\     /\      /\
-                  1/16  4/16  6/16  4/16    1/16
-                    0     1     2      3      4
-                   / \  /  \   / \    / \    / \
-                1/32  5/32  10/32  10/32  5/32  1/32 
-                  0    1     2      3      4     5 
-                 / \  / \   / \    / \    / \   / \
-            1/64  6/64  15/64 20/64  15/64   6/64  1/64
-              0     1     2     3      4       5     6
+
+n                    
+                            1/2      1/2     
+1                            0        1
+                             /\      /\
+2                        1/4     2/4    1/4
+                         0       1      2
+                        /\      /\      /\
+3                      1/8  3/8    3/8     1/8 
+                        0    1      2       3
+                       /\   /\     /\      /\
+4                  1/16  4/16  6/16  4/16    1/16
+                     0     1     2      3      4
+                    / \  /  \   / \    / \    / \
+5                1/32  5/32  10/32  10/32  5/32  1/32 
+                   0    1     2      3      4     5 
+                  / \  / \   / \    / \    / \   / \
+6            1/64  6/64  15/64 20/64  15/64   6/64  1/64
+               0     1     2     3      4       5     6
+              / \   / \   / \   / \    / \     / \   / \
+7        1/128 7/128 21/128 35/128 35/128 21/128 7/128 1/128             
+        
+Let's write out the probabilities and see if there is a pattern.
+
+for even values of n:
+P(n) = 1, 3/4, 10/16, 35/64
+
+
+for odd values of n:
+P(n) = 1, 2/4, 6/16, 20/64, ...
+     = 1, 1/2, 3/8, 10/32, ...  
+     
+The numerator of both show a pattern: 1, 3, 10, 35
+This is recognizable as the odd graph O3, where O3 is
+2n-1 choose n-1      
+
+Using this, we can solve for P(n)
+
+
+
+P(n) = 1    for n <= 1
+P(n) = (n-1 choose n/2 - 1)      *(2^(n-1))     for even n > 1
+P(n) = (n   choose ((n+1)/2)-1 ) *(2^(n-1))     for odd n > 1   
+        
                        
 """
 """
