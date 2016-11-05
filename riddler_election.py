@@ -16,6 +16,17 @@ would your chances of swinging the election change?
 """
 
 """"
+Let's solve it analytically first, and treat the even and off cases 
+differently.
+
+The total number of voters is N+1, since you are not included in N.
+If N is even, then for your vote to matter, the vote must be tied
+prior to your vote.
+If N is odd, then for your vote to matter, your vote must either force
+a tie or result in no tie.  So either candidate A is up by one vote, 
+or candidate B is up by one vote.  
+
+
 
 """
 """
