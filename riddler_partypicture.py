@@ -44,8 +44,23 @@ So,
 
 1 3 4 x x x    together all 6/6 cases
 
-1 3 5
+1 3 5 2 4 6
+1 3 5 2 6 4
+1 3 5 4 2 6
+1 3 5 4 6 2
+1 3 5 6 2 4  together
+1 3 5 6 4 2  together
 
+1 3 6 2 4 5
+1 3 6 2 5 4
+1 3 6 4 2 5
+1 3 6 4 5 2
+1 3 6 5 2 4 together  
+1 3 6 5 4 2 together
+
+So, for
+
+1 3 x x x x  together 14/24 cases 
 
 
 
