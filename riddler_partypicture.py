@@ -81,10 +81,28 @@ import math
 import pdb
 
 def checkfortogether(sequence):
+    """ return True if any of the couples are sitting together
+    """
 
     lastnumber = -100
     for number in sequence:
         print number
+        if number == lastnumber+1 and number % 2 == 0:
+            return True
+        if number == lastnumber-1 and number % 2 == 1:
+            return True
+        lastnumber = number
     return False
+    
+    
+def runcouplesimulations(couplesequence, numberofsimulations):
+
+    numbernottogether = 0
+    
+    
+    
+    return numbernottogether, numberofsimulations, (numbernottogether+0.0)/numberofsimulations  
         
-print checkfortogether([1,2,3,4])
+print checkfortogether([1,3,2,4])
+
+print runcouplesimulations([1,2,3,4],100)
