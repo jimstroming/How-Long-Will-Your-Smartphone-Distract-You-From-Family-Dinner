@@ -113,7 +113,7 @@ def runcouplesimulations(couplesequence, numberofsimulations):
         
 print checkfortogether([1,3,2,4])
 
-print runcouplesimulations([1,2,3,4,5,6,7,8,9,10],100000)
+print runcouplesimulations([1,2,3,4,5,6],100000)
 #print runcouplesimulations([1,2,3,4,5,6,7,8,9,10],1000000)
 
 """
@@ -151,7 +151,7 @@ For the three couple simulation,  the result is also near 1/3
 
 
 """
-For 5 couples, it is higher.   
+For 5 couples, it is higher, 34.8%.  Is that real or a simulation artifact?
 
 [4, 6, 2, 10, 7, 1, 9, 8, 5, 3]
 4
