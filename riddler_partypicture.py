@@ -62,6 +62,16 @@ So, for
 
 1 3 x x x x  together 14/24 cases 
 
+1 4, 1 5 , and 1 6 should be the same as 1 3.
+They are all cases where the first two people
+are from different couples.
 
+So,
+P(together) = 24/24 + 4*(14/24) = 40/60 = 2/3
+P(not-together) = 1/3 for the three couple case, same as the two couple case.
+
+This looks like a pattern.
+Let's run a python simulation to see if P(not-together) = 1/3 for the 
+five couple case.
 
 """
