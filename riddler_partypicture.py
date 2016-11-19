@@ -27,4 +27,26 @@ P(not together) = 1/3
 
 """
 
+"""
+Let's do the 3 couple case.
 
+1 2 x x x x  together   all 24/24 cases
+
+1 3 2 4 5 6 together
+1 3 2 4 6 5 together
+1 3 2 5 4 6
+1 3 2 5 6 4 together
+1 3 2 6 4 5  
+1 3 2 6 5 4 together
+
+So,
+1 3 2 x x x    together on 4/6 cases
+
+1 3 4 x x x    together all 6/6 cases
+
+1 3 5
+
+
+
+
+"""
