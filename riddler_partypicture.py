@@ -85,6 +85,7 @@ def checkfortogether(sequence):
     """
 
     lastnumber = -100
+    #pdb.set_trace()
     for number in sequence:
         print number
         if number == lastnumber+1 and number % 2 == 0:
@@ -96,13 +97,53 @@ def checkfortogether(sequence):
     
     
 def runcouplesimulations(couplesequence, numberofsimulations):
+    """ return the number of times the couples are not together
+    the number of simulations, and the ratio of times couples are not together
+    """
 
     numbernottogether = 0
-    
-    
+    newsequence = couplesequence
+    for i in range (0,numberofsimulations):
+        random.shuffle(newsequence)
+        print newsequence
+        if not checkfortogether(newsequence):
+            numbernottogether += 1 
     
     return numbernottogether, numberofsimulations, (numbernottogether+0.0)/numberofsimulations  
         
 print checkfortogether([1,3,2,4])
 
-print runcouplesimulations([1,2,3,4],100)
+print runcouplesimulations([1,2,3,4],100000)
+#print runcouplesimulations([1,2,3,4,5,6,7,8,9,10],1000000)
+
+"""
+
+For the two couple simulation, the result is 1/3
+
+[3, 1, 2, 4]
+3
+1
+2
+[2, 1, 4, 3]
+2
+1
+(33147, 100000, 0.33147)
+
+"""
+
+"""
+
+
+[4, 6, 2, 10, 7, 1, 9, 8, 5, 3]
+4
+6
+2
+10
+7
+1
+9
+8
+5
+3
+(347843, 1000000, 0.347843)
+"""
