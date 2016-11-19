@@ -75,3 +75,16 @@ Let's run a python simulation to see if P(not-together) = 1/3 for the
 five couple case.
 
 """
+
+import random
+import math
+import pdb
+
+def checkfortogether(sequence):
+
+    lastnumber = -100
+    for number in sequence:
+        print number
+    return False
+        
+print checkfortogether([1,2,3,4])
