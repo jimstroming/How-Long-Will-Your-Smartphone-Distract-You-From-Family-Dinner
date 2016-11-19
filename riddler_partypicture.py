@@ -151,7 +151,8 @@ For the three couple simulation,  the result is also near 1/3
 
 
 """
-For 5 couples, it is higher, 34.8%.  Is that real or a simulation artifact?
+For 5 couples, it is higher, 34.8%.
+So the percentage does increase when you get to 5 couples.
 
 [4, 6, 2, 10, 7, 1, 9, 8, 5, 3]
 4
