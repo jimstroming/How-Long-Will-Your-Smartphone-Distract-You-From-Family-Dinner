@@ -113,7 +113,7 @@ def runcouplesimulations(couplesequence, numberofsimulations):
         
 print checkfortogether([1,3,2,4])
 
-print runcouplesimulations([1,2,3,4],100000)
+print runcouplesimulations([1,2,3,4,5,6,7,8,9,10],100000)
 #print runcouplesimulations([1,2,3,4,5,6,7,8,9,10],1000000)
 
 """
@@ -132,7 +132,26 @@ For the two couple simulation, the result is 1/3
 """
 
 """
+For the three couple simulation,  the result is also near 1/3
+[5, 3, 4, 6, 1, 2]
+5
+3
+4
+[1, 5, 2, 3, 6, 4]
+1
+5
+2
+3
+6
+4
+(33568, 100000, 0.33568)
 
+
+"""
+
+
+"""
+For 5 couples, it is higher.   
 
 [4, 6, 2, 10, 7, 1, 9, 8, 5, 3]
 4
