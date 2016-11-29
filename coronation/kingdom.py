@@ -28,11 +28,27 @@ class Kingdom:
         self.numbersubjectsatroundstart = 0
         
     def populatekingdom(self, numbersubjects):
-        """ fill the kingdom with numbersubjects subjects """
+        """ Fill the kingdom with numbersubjects subjects """
         self.subjects = []
         for i in range(0,numbersubjects):
             self.subjects.append(Subject())
             
     def eliminatesubject(self, subjectnumber):
-        """ eliminate the subject  """
+        """ Eliminate the subject  """
         self.subjects[subjectnumber].eliminate()
+        
+    def playaround(self):
+        """ Executes one round of the king selection game
+        Requires the kingdome to be populated prior to the round."""
+        
+        # let every subject eliminate a subject
+        for i in range(0, self.numbersubjectsatroundstart):
+            self.eliminatesubject(self.subjects[i]
+                      .choosewhomtoeliminate(self.numbersubjectsatroundstart))
+                      
+        # delete all the subjects who have been eliminated              
+        for i in range(self.numbersubjectsatroundstart-1, -1, -1):  
+            if self.subjects[i].iseliminated(): del self.subjects[i]  
+            
+        # count the numberofsubjects
+        self.numbersubjectsatroundstart =  len(self.subjects)   
