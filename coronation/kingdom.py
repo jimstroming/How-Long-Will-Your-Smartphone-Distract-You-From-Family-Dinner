@@ -75,7 +75,7 @@ class Kingdom:
         for i in range(self.numbersubjectsatroundstart-1, -1, -1):  
             if self.subjects[i].iseliminated(): 
                 del self.subjects[i]
-                print("deleted subject",i)  
+                # print("deleted subject",i)  
             
         # count the numberofsubjects
         self.numbersubjectsatroundstart =  len(self.subjects)   
@@ -89,8 +89,23 @@ class Kingdom:
         i = 1;
         while (self.numbersubjectsatroundstart > 1):
             self.playaround()
-            print("end of round",i)
-            print(self.numbersubjectsatroundstart,"left")
+            #print("end of round",i)
+            #print(self.numbersubjectsatroundstart,"left")
             i += 1
-        if self.numbersubjectsatroundstart == 1: return True
+        if self.numbersubjectsatroundstart == 1: 
+            print("Win")
+            return True
+        print("False")    
         return False
+        
+""" Let's run some simulations
+
+67 Wins,  100 Games,  67.0 Percent Wins
+65 Wins,  100 Games,  65.0 Percent Wins
+58 Wins,  100 Games,  58.0 Percent Wins
+671 Wins,  1000 Games,  67.1 Percent Wins
+
+So, it looks like the game results in a winner approximately 2/3 of the time.
+
+
+""""        
