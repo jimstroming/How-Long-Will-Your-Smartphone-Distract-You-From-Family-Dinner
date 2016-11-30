@@ -1,3 +1,26 @@
+""" The Puzzle of the Lonesome King
+from  http://fivethirtyeight.com/features/the-puzzle-of-the-lonesome-king/
+
+The childless King of Solitaria lives alone in his castle. Overly lonely, 
+the king one day offers one lucky subject the chance to be prince or princess 
+for a day. The loyal subjects leap at the opportunity, having heard tales of 
+the opulent castle and decadent meals that will be lavished upon them. The 
+subjects assemble on the village green, hoping to be chosen.
+
+The winner is chosen through the following game. In the first round, every 
+subject simultaneously chooses a random other subject on the green. 
+(It is possible, of course, that some subjects will be chosen by more than one 
+other subject.) Everybody chosen is eliminated. (Not killed or anything, just 
+sent back to their hovels.) In each successive round, the subjects who are 
+still in contention simultaneously choose a random remaining subject, and 
+again everybody chosen is eliminated. If there is eventually exactly one 
+subject remaining at the end of a round, he or she wins and heads straight to 
+the castle for feting. However, it is also possible that everybody could be 
+eliminated in the last round, in which case nobody wins and the king remains 
+alone. If the kingdom has a population of 56,000 (not including the king), is 
+it more likely that a prince or princess will be crowned or that nobody will 
+win? """
+
 import random
 
 class Subject:
@@ -21,7 +44,8 @@ class Subject:
         return random.randint(0,numbersubjects-1)
         
 class Kingdom:
-
+    """ The King selection game, from the 538 riddler
+    from http://fivethirtyeight.com/features/the-puzzle-of-the-lonesome-king/"""
     def __init__(self):
         """ Initialize a kingdom with no subjects. """
         self.subjects = []
@@ -39,7 +63,7 @@ class Kingdom:
         self.subjects[subjectnumber].eliminate()
         
     def playaround(self):
-        """ Executes one round of the king selection game
+        """ Executes one round of the king selection game.
         Requires the kingdom to be populated prior to the round."""
         
         # let every subject eliminate a subject
