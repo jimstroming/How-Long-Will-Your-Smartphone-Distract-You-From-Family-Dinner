@@ -27,11 +27,12 @@ class Kingdom:
         self.subjects = []
         self.numbersubjectsatroundstart = 0
         
-    def populatekingdom(self, numbersubjects):
+    def populate(self, numbersubjects):
         """ Fill the kingdom with numbersubjects subjects """
         self.subjects = []
         for i in range(0,numbersubjects):
             self.subjects.append(Subject())
+        self.numbersubjectsatroundstart = numbersubjects    
             
     def eliminatesubject(self, subjectnumber):
         """ Eliminate the subject  """
@@ -39,7 +40,7 @@ class Kingdom:
         
     def playaround(self):
         """ Executes one round of the king selection game
-        Requires the kingdome to be populated prior to the round."""
+        Requires the kingdom to be populated prior to the round."""
         
         # let every subject eliminate a subject
         for i in range(0, self.numbersubjectsatroundstart):
@@ -48,7 +49,24 @@ class Kingdom:
                       
         # delete all the subjects who have been eliminated              
         for i in range(self.numbersubjectsatroundstart-1, -1, -1):  
-            if self.subjects[i].iseliminated(): del self.subjects[i]  
+            if self.subjects[i].iseliminated(): 
+                del self.subjects[i]
+                print("deleted subject",i)  
             
         # count the numberofsubjects
         self.numbersubjectsatroundstart =  len(self.subjects)   
+        
+    def playgame(self, subjectnumber):
+        """ Executes the king selection game.
+        Returns True if one subject remains at the end.
+        Returns False if no subjects remain at the end. """
+        
+        self.populate(subjectnumber)
+        i = 1;
+        while (self.numbersubjectsatroundstart > 1):
+            self.playaround()
+            print("end of round",i)
+            print(self.numbersubjectsatroundstart,"left")
+            i += 1
+        if self.numbersubjectsatroundstart == 1: return True
+        return False
