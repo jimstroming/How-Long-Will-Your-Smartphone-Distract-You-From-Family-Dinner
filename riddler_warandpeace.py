@@ -90,13 +90,50 @@ My expected return = $0*P(opp strength > my strength and opp strength > n)
    =  0*(1-n^2)/2 +($1 trillion)*n^2 +($2 trillion)*(1-n^2)/2
    = ($1 trillion)(n^2 + (1-n^2)) = $1 trillion
    
-So whatever cutoff point I choose, as long as we both use it the expected 
+So whatever cutoff point I choose, as long as we both use it, the expected 
 return will be $1 trillion.
 
 This is a big problem.  There is no obvious optimal strategy we can both
 discover independently and agree upon.  So how do I choose a strategy?
 
-       
+-----
+
+Let's try another approach.  
+What if my opponent decides never to fight, and I choose to fight if my
+strength > n?  What would my expected return be?
+
+My expected return = $0*P(my strength > n and opp strength > my strength)
+         + ($1 trillion)P(my strength < n)
+         + ($2 trillion)P(my strength > n and my strength > opp strength)
+         
+  =  0  +($1 trillion)n  + ($2 trillion)(1-n^2)/2
+  = ($1 trillion)(n +(1-n^2))
+  = ($1 trillion)(1 + n - n^2)
+  
+Set the derivative to zero to find a local max/min
+0 = 1-2n; n = 0.5
+
+E(0) = $1 trillion
+E(1) = $1 trillion
+E(0.5) = ($1 trillion)(1 + 0.5 - 0.25) = $1.25 trillion
+
+------------
+
+What is my opponent decides to always fight, and I choose to fight if my 
+strength >n?  What would my expected return be?
+
+My expected return = $0*P(opp strength > my strength) 
+        + ($2 trillion)P(my strength > opp strength)
+      = $1 trillion
+      
+--------------
+
+What if my opponent decides to fight on strength > .2, and I choose 
+to fight if my strength if greater than n?
+
+My expected return = $0*P(opp strength > my strength and (opp strength > .2 or my strength > n)) 
+     +($1 trillion)P(opp strength < .2 and my strength < n)    
+     +($2 trillion)P(my strength > opp strength and (opp strength > .2 or my strength > n))          
 
 
 
