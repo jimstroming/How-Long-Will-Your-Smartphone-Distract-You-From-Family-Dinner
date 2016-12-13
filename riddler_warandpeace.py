@@ -180,5 +180,27 @@ Now, there are two decisions to make.
 Player 1 has to decide whether or not to go to war.
 If player 1 does not war, then player 2 has to decide whether or not to go to war.
 
+There may be an element of bluffing in this.
+If player 1 does not go to war, it indicates weakness, which may cause player 2 
+to go to war.
+
+Let's say player 1 adopts a rule of only going to war if strength > 0.5
+If this is optimal, then player 2 knows this is player 1's strategy.
+So if player 1 does not go to war, player 2 knows that player 1's 
+strength is uniformly distributed between 0 and 0.5.
+So player 2 will go to war is player 2 strength is greater than 0.25.
+
+E(player1) = ($2 trillion)P(player1 > 0.5 and player1 > player2)
+             + ($2 trillion)P(player1 < 0.5 and player 2 > 0.25 and player1 > player2)
+             + ($1 trillion)P(player1 < 0.5 and player 2 < 0.25)
+             + 0*P(player1 > 0.5 and player2 > player1)
+             + 0*P(player1 < 0.5 and player2 > 0.25 and player2 > player1)
+             
+ 
+
+
+
+
+
 
 
