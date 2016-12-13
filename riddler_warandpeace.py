@@ -50,6 +50,16 @@ We fight to a draw, and each get $1 trillion.
 
 ----
 
+What if I get a strength of 0.2.
+This is not a very good strength.  I will probably lose a fight.
+There are five possible scenarios.
+
+I fight, opponent strength > 0.2   -> I get $0, 
+I fight, opponent strenght < 0.2   -> I get $2 trillion
+I don't fight, opponent doesn't fight  -> I get $1 trillion
+i don't fight, opponent fights, opponent strength > 0.2  -> I get $0
+I don't fight, opponent fights, opponent strength < 0.2  -> I get $2 trillion
+
 
 
 
