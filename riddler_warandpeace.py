@@ -63,6 +63,25 @@ I don't fight, opponent fights, opponent strength < 0.2  -> I get $2 trillion
 One thing I can use is that, for the optimal strategy, whatever rule
 I adapt, my opponent will also adapt, since we are in the identical situation.
 
+-------------
+
+Let's say both players adopt a rule of never fight.
+The expected return will be $1 trillion.
+
+Let's say both players adopt a rule of always fight.
+My expected return = $0*P(me having a lower strength)
+                  +($2 trillion)*P(me having a higher strength)
+          = $0*0.5 +($2 trillion)*0.5 = $1 trillion.
+          
+Let's say both players adopt a rule of fighting when strength > 0.5
+My expected return = $0*P(opp strength > my strength and opp strength >  0.5)
+                 +($1 trillion)*P(my strength < 0.5 and opp strength < 0.5)
+                 +($2 trillion)*P(my strength > opp strength and my strength > 0.5)
+
+= 0*(3/8) + ($1 trillion)*(0.5)*(0.5) + ($2 trillion)*(3/8)
+=  $250 billion + $750 billion = $1 trillion.
+
+          
 
 
 
