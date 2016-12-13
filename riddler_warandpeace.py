@@ -81,7 +81,22 @@ My expected return = $0*P(opp strength > my strength and opp strength >  0.5)
 = 0*(3/8) + ($1 trillion)*(0.5)*(0.5) + ($2 trillion)*(3/8)
 =  $250 billion + $750 billion = $1 trillion.
 
-          
+Now, let's do the general case.
+Both players adopt a rule of fighting when strength > n.
+
+My expected return = $0*P(opp strength > my strength and opp strength > n)
+              + ($1 trillion)P(my strength < n and opp strength < n)
+              + ($2 trillion)P(my strength > opp strength and my strength > n)
+   =  0*(1-n^2)/2 +($1 trillion)*n^2 +($2 trillion)*(1-n^2)/2
+   = ($1 trillion)(n^2 + (1-n^2)) = $1 trillion
+   
+So whatever cutoff point I choose, as long as we both use it the expected 
+return will be $1 trillion.
+
+This is a big problem.  There is no obvious optimal strategy we can both
+discover independently and agree upon.  So how do I choose a strategy?
+
+       
 
 
 
