@@ -22,3 +22,22 @@ What is the optimal strategy of each country (declaring peace or war) given
 its strength?
 
 """
+
+"""
+
+
+Let's say my army has a strength of 0.
+I will lose any fight.
+So, I can not fight, but my opponent doesn't know that.
+
+If my opponent also has a strength of 0, she will also not fight.
+So we each keep the $1 trillion.
+
+If my opponent has a strength of 1, she will definitely fight.
+So she will get $2 trillion, and I will get $0.
+
+
+
+
+
+
