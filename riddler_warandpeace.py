@@ -55,10 +55,13 @@ This is not a very good strength.  I will probably lose a fight.
 There are five possible scenarios.
 
 I fight, opponent strength > 0.2   -> I get $0, 
-I fight, opponent strenght < 0.2   -> I get $2 trillion
+I fight, opponent strength < 0.2   -> I get $2 trillion
 I don't fight, opponent doesn't fight  -> I get $1 trillion
 i don't fight, opponent fights, opponent strength > 0.2  -> I get $0
 I don't fight, opponent fights, opponent strength < 0.2  -> I get $2 trillion
+
+One thing I can use is that, for the optimal strategy, whatever rule
+I adapt, my opponent will also adapt, since we are in the identical situation.
 
 
 
