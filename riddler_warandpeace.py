@@ -128,13 +128,15 @@ My expected return = $0*P(opp strength > my strength)
       
 --------------
 
-What if my opponent decides to fight on strength > .2, and I choose 
+What if my opponent decides to fight on strength > .25, and I choose 
 to fight if my strength if greater than n?
 
-My expected return = $0*P(opp strength > my strength and (opp strength > .2 or my strength > n)) 
-     +($1 trillion)P(opp strength < .2 and my strength < n)    
-     +($2 trillion)P(my strength > opp strength and (opp strength > .2 or my strength > n))          
+My expected return = $0*P(opp strength > my strength and (opp strength > .25 or my strength > n)) 
+     +($1 trillion)P(opp strength < .25 and my strength < n)    
+     +($2 trillion)P(my strength > opp strength and (opp strength > .25 or my strength > n))          
 
+
+------------------
 
 
 
