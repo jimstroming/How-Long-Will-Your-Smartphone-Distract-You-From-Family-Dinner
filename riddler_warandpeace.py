@@ -138,5 +138,38 @@ My expected return = $0*P(opp strength > my strength and (opp strength > .25 or 
 
 ------------------
 
+Let's try the extra credit questions now.
+They may give some insight into finishing off the main problem
+
+--------------
+
+Extra credit: What if the value of winning the war were $5 trillion rather than $2 trillion?
+
+Both players adopt a rule of fighting when their strength > n.
+
+My expected return = $0*P(opp strength > my strength and opp strength > n)
+              + ($1 trillion)P(my strength < n and opp strength < n)
+              + ($5 trillion)P(my strength > opp strength and my strength > n)
+   =  0*(1-n^2)/2 +($1 trillion)*n^2 +($5 trillion)*(1-n^2)/2
+   = ($1 trillion)(n^2 + 2.5(1-n^2))
+   = ($1 trillion)(2.5-1.5(n^2))
+   
+Set the derivative to zero to find the local min/max
+0 = -3n
+n = 0
+
+E(0) = 2.5 trillion
+E(1) = 1 trillion
+
+So, if the value of winning the war is $5 trillion, then you should always fight.
+
+Is this correct?
+What is we set n = 1/2
+E(1/2) = ($1 trillion)(2.5-1.5/4) = $2.125 trillion <  $2.5 trillion 
+That $5 trillion dollar prize is so great.
+If you have a tiny strength, your opponent is probably going to go to war and 
+you'll get nothing.  But you are better off going to war just in case they have 
+a smaller strength than you, rather than hoping for peace and the smaller prize.
+
 
 
