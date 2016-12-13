@@ -171,5 +171,14 @@ If you have a tiny strength, your opponent is probably going to go to war and
 you'll get nothing.  But you are better off going to war just in case they have 
 a smaller strength than you, rather than hoping for peace and the smaller prize.
 
+-----------
+
+Extra credit:  What if the countries don’t announce at the same time and 
+instead one announces first and the other second?
+
+Now, there are two decisions to make.
+Player 1 has to decide whether or not to go to war.
+If player 1 does not war, then player 2 has to decide whether or not to go to war.
+
 
 
