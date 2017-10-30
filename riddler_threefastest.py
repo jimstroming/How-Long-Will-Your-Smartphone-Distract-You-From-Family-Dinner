@@ -5,3 +5,8 @@
 # However, your personal racetrack is severely lacking in capacity, and you 
 # can only race five horses at a time. What is the minimum number of races you will need 
 # to organize to identify your three fastest horses?
+
+# My son suggested 11 races.  Five first round races, that elminated the bottom two in each race,
+# then six follow up races.  
+
+
